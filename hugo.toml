@@ -1,0 +1,19 @@
+baseURL = 'https://example.org/'
+languageCode = 'ja'
+title = 'mutoxu=N'
+theme = 'PaperMod'
+
+
+[markup]
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+lineAnchors = ''
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = 'gruvbox'
+tabWidth = 4
