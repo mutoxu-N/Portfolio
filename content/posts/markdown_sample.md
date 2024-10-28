@@ -2,6 +2,8 @@
 date = '2024-10-27T16:24:27+09:00'
 draft = true
 title = 'マークダウン備忘録'
+tags = ["Markdown"]
+featured_image = ""
 +++
 
 
