@@ -1,7 +1,11 @@
 baseURL = 'https://example.org/'
-languageCode = 'ja'
 title = 'mutoxu=N'
 theme = 'ananke'
+languageCode = 'ja'
+DefaultContentLanguage = 'ja'
+
+[pagination]
+pagerSize = 5
 
 
 [markup]
