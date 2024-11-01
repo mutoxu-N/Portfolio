@@ -1,0 +1,18 @@
+[Recent]
+other = '最近のポスト'
+[Popular]
+other = 'Post'
+[error404]
+other = 'ページが見つかりませんでした'
+[home]
+other = 'ホーム'
+[nothing]
+other = 'ここには何も見つかりません 😉'
+[previous]
+other = '前のページ'
+[next]
+other = '次のページ'
+[tags]
+other = 'Tags'
+[Posts]
+other = 'Posts'
