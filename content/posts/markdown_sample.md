@@ -1,10 +1,12 @@
-+++
-date = '2024-10-27T16:24:27+09:00'
-draft = true
-title = 'マークダウン備忘録'
-tags = ["Markdown"]
-featured_image = ""
-+++
+---
+title: "マークダウン備忘録"
+date: 2024-10-27T16:24:27+09:00
+description: "マークダウンとその見た目を確認できます。"
+tags: ["Markdown"]
+type: post
+weight: 25
+draft: true
+---
 
 
 # ようこそ！

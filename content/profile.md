@@ -1,10 +1,13 @@
-+++
-date = '2024-10-28T10:25:12+09:00'
-draft = false
-featured_image = '/home/bg_home.jpg'
-+++
+---
+date: 2024-11-01
+image: "home/bg_home.jpg"
+lastmod: 2024-11-01
+showTableOfContents: false
+title: "Profile"
+type: "page"
+---
 
-# Profile
+# mutoxu=N
 趣味で開発をしている情報工学科大学生。
 学業が趣味のようなものなので、
 就活などで趣味を聞かれた時に困っている。
@@ -27,9 +30,9 @@ featured_image = '/home/bg_home.jpg'
 
 
 # Icon
-![アイコン画像](/home/icon.png)
+![アイコン画像](/images/avater.webp/)
 修学旅行で北海道に行ったときにお土産屋で見つけたストラップ。
 その時は買わなかったが、アイコンとしてずっと使っていたら
 欲しくなってきた。
-「幸せの黄色いてるぼう」というらしい。
+「幸せの黄色いてるぼう」というら物らしい。
 
