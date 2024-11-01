@@ -1,6 +1,5 @@
 ---
 date: 2024-11-01
-image: "home/bg_home.jpg"
 lastmod: 2024-11-01
 showTableOfContents: false
 title: "Profile"
@@ -34,5 +33,8 @@ type: "page"
 修学旅行で北海道に行ったときにお土産屋で見つけたストラップ。
 その時は買わなかったが、アイコンとしてずっと使っていたら
 欲しくなってきた。
-「幸せの黄色いてるぼう」というら物らしい。
+「幸せの黄色いてるぼう」[^terubou]という物らしい。
+
+[^terubou]: http://terubou.net/
+
 
