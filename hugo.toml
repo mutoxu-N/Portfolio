@@ -1,23 +1,80 @@
 baseURL = 'https://example.org/'
 title = 'mutoxu=N'
-theme = 'ananke'
+theme = 'gokarna'
 languageCode = 'ja'
 DefaultContentLanguage = 'ja'
 
-[pagination]
-pagerSize = 5
+[params]
+avatarAltText = "avatar"
+avatarSize = "size-m"
+avatarURL = "/images/icon.webp"
+
+customHeadHTML = """
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+      });
+    </script>
+  """
+
+# description = "something"
+footer = "mutoxu=N"
+metaKeywords = ["blog", "gokarna", "hugo"]
+showBackToTopButton = true # true or false for "back to top" button on posts and pages
+socialIcons = [
+    { name = "twitter", url = "https://x.com/MutoxuN" },
+    { name = "github", url = "https://github.com/mutoxu-N" },
+]
+
+
+[menu]
+[[menu.main]]
+name = "Posts"
+pre = "<span data-feather='book'></span>"
+url = "/posts/"
+weight = 1
+
+
+[[menu.main]]
+name = "Tags"
+pre = "<span data-feather='tag'></span>"
+url = "/tags/"
+weight = 2
+
+
+[[menu.main]]
+name = "Profile"
+pre = "<span data-feather='user'></span>"
+url = "/profile/"
+weight = 3
+
+
+[[menu.main]]
+identifier = "github"
+pre = "<span data-feather='github'></span>"
+url = "https://github.com/mutoxu-N"
+weight = 4
+post = ""
 
 
 [markup]
-[markup.highlight]
-anchorLineNos = false
-codeFences = true
-guessSyntax = false
-lineAnchors = ''
-lineNoStart = 1
-lineNos = true
-lineNumbersInTable = true
-noClasses = true
-noHl = false
-style = 'gruvbox'
-tabWidth = 4
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 4
+ordered = false
+
+[minify]
+minifyOutput = true
