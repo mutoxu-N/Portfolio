@@ -4,7 +4,11 @@ theme = 'gokarna'
 languageCode = 'ja'
 DefaultContentLanguage = 'ja'
 
+
 [params]
+accentColor = "#4D4DFF"
+dateFormat = "2006年1月2日"
+
 avatarAltText = "avatar"
 avatarSize = "size-m"
 avatarURL = "/images/icon.webp"
@@ -30,14 +34,17 @@ customHeadHTML = """
     </script>
   """
 
-# description = "something"
+description = "Done is better than perfect."
 footer = "mutoxu=N"
 metaKeywords = ["blog", "gokarna", "hugo"]
-showBackToTopButton = true # true or false for "back to top" button on posts and pages
+showBackToTopButton = true
 socialIcons = [
     { name = "twitter", url = "https://x.com/MutoxuN" },
     { name = "github", url = "https://github.com/mutoxu-N" },
 ]
+# showPostsOnHomePage = "recent"
+# numberPostsOnHomePage = 1
+# togglePreviousAndNextButtons = "true"
 
 
 [menu]
@@ -75,6 +82,20 @@ post = ""
 startLevel = 1
 endLevel = 4
 ordered = false
+
+
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = true
+lineAnchors = ''
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = 'gruvbox'
+tabWidth = 4
 
 [minify]
 minifyOutput = true

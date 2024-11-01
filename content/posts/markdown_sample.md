@@ -5,6 +5,7 @@ description: "マークダウンとその見た目を確認できます。"
 tags: ["Markdown"]
 type: post
 weight: 25
+showTableOfContents: true
 draft: true
 ---
 
