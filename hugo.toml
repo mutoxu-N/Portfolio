@@ -54,26 +54,32 @@ pre = "<span data-feather='book'></span>"
 url = "/posts/"
 weight = 1
 
+[[menu.main]]
+name = "Products"
+pre = "<span data-feather='gift'></span>"
+url = "/products/"
+weight = 2
+
 
 [[menu.main]]
 name = "Tags"
 pre = "<span data-feather='tag'></span>"
 url = "/tags/"
-weight = 2
+weight = 3
 
 
 [[menu.main]]
 name = "Profile"
 pre = "<span data-feather='user'></span>"
 url = "/profile/"
-weight = 3
+weight = 4
 
 
 [[menu.main]]
 identifier = "github"
 pre = "<span data-feather='github'></span>"
 url = "https://github.com/mutoxu-N"
-weight = 4
+weight = 5
 post = ""
 
 
