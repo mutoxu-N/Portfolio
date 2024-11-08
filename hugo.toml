@@ -42,10 +42,7 @@ customHeadHTML = """
   """
 metaKeywords = ["blog", "gokarna", "hugo"]
 showBackToTopButton = true
-
-# showPostsOnHomePage = "recent"
-# numberPostsOnHomePage = 1
-# togglePreviousAndNextButtons = "true"
+togglePreviousAndNextButtons = true
 
 
 [menu]
