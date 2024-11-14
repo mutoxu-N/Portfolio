@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウン備忘録</title><link>http://localhost:1313/posts/markdown_sample/</link><pubDate>Sun, 27 Oct 2024 16:24:27 +0900</pubDate><guid>http://localhost:1313/posts/markdown_sample/</guid><description>&lt;h1 id="ようこそ">ようこそ！&lt;/h1>
+&lt;p>&amp;lt;!--more--&amp;gt; より上はサマリーとして表示されます。
+デフォルトだと半角スペース区切りで70単語文が表示されますが、
+日本語には半角スペースが無いので全文がサマリーとして表示されてしまいます。
+&amp;lt;!--more--&amp;gt; を使いましょう！&lt;/p></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/posts/yt-dlp-gui/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>YouTubeなどの動画プラットフォームから動画をダウンロードしたりするためのコマンドラインツールとして、
+&lt;a href="https://github.com/yt-dlp/yt-dlp">yt-dlp&lt;/a>というものが存在する。&lt;/p>
+&lt;p>このソフトウェアは&lt;a href="https://pypi.org/project/yt-dlp/">Pythonライブラリ&lt;/a>として利用することもでき、
+これとTkinterを使用して利用しやすいGUIを実装した。&lt;/p>
+&lt;p>ソースコード/インストール: &lt;a href="https://github.com/mutoxu-N/yt-dlp-GUI">GitHub&lt;/a>&lt;/p>
+&lt;h2 id="problem">CLIの問題点&lt;/h2>
+&lt;h3 id="詳しくないと使えない">詳しくないと使えない&lt;/h3>
+&lt;p>CLIツールの主な問題として、使うために知識が必要であることがある。
+特にターミナルを起動してコマンドを実行するのは、
+不慣れな人にとって&lt;strong>恐怖&lt;/strong>そのもの。&lt;/p>
+&lt;h3 id="オプションなどのコマンドを覚える必要がある">オプションなどのコマンドを覚える必要がある&lt;/h3>
+&lt;p>&lt;code>yt-dlp&lt;/code>は高度なソフトウェアであり、
+数多くのオプションを扱えるが、
+その多くが&lt;strong>意味不明&lt;/strong>でよく分からない。&lt;/p>
+&lt;h3 id="ある操作を繰り返しす際にコマンドを書くのが面倒">ある操作を繰り返しす際にコマンドを書くのが面倒&lt;/h3>
+&lt;p>ある動画をダウンロードするコマンドがあっても、
+複数の動画をDLしたいときには、1動画に対して1つずつコマンドを実行する必要がある。
+スクリプトを書ける人なら繰り返しを使って一括処理できそうだが、
+&lt;strong>全員がShellScriptを扱えるわけじゃない&lt;/strong>。&lt;/p>
+&lt;h2 id="実装した内容">実装した内容&lt;/h2>
+&lt;p>&lt;a href="#problem">CLIの問題点&lt;/a>の内容を踏まえて以下のような機能を実装した。&lt;/p>
+&lt;h3 id="gui">GUI&lt;/h3>
+&lt;p>とにかくCLIは難しい(&lt;del>難しそうにみえる&lt;/del>)ので、
+TkinterでGUIを作成した。
+&lt;img src="http://localhost:1313/posts/imgs/yt-dlp/gui.png" alt="yt-dlpのGUI画像">&lt;/p>
+&lt;h3 id="mp3形式でdl">MP3形式でDL&lt;/h3>
+&lt;p>音楽などは、動画より音声でDLしたいという需要がある。
+その中でもMP3形式は幅広く利用されているためこれに対応した。&lt;/p>
+&lt;h3 id="一括dl">一括DL&lt;/h3>
+&lt;p>出力フォルダに&lt;code>download_list.txt&lt;/code>を配置することで、
+複数の動画から一括でダウンロードを実行することができる。
+デフォルトではMP3形式でダウンロードされるので、
+ダウンロードしたい音楽のURLを1行ずつ記載しておけば、
+すべてが自動でDLされる。
+&lt;img src="http://localhost:1313/posts/imgs/yt-dlp/list.png" alt="一括DLの設定ファイル例">&lt;/p>
+&lt;h3 id="限定動画のdl">限定動画のDL&lt;/h3>
+&lt;p>YouTubeの動画の中には、視聴条件として&lt;/p>
+&lt;ul>
+&lt;li>YouTube Premiumに加入&lt;/li>
+&lt;li>メンバーシップに参加&lt;/li>
+&lt;/ul>
+&lt;p>が設定されているものがある。&lt;/p>
+&lt;p>このような限定動画に対応するために、
+ブラウザのCookie情報を読み込んでダウンロードを行う機能を実装している。&lt;/p>
+&lt;p>&lt;a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">Get cookies.txt LOCALLY&lt;/a>
+のような拡張機能を利用して &lt;code>youtube.com&lt;/code> のCookie情報をテキストファイルに出力すれば、
+ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>Products</title><link>http://localhost:1313/products/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/products/</guid><description>&lt;p>mutoxu=N が作成した物のまとめ。&lt;/p>
+&lt;h2 id="utility">Utility&lt;/h2>
+&lt;h2 id="android関連">Android関連&lt;/h2>
+&lt;h2 id="その他">その他&lt;/h2></description></item><item><title>Profile</title><link>http://localhost:1313/profile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/profile/</guid><description>&lt;p>趣味で開発をしている情報工学科大学生。
+学業やバイトが趣味のようなものなので、
+就活などで趣味を聞かれた時に困っている。&lt;/p>
+&lt;h2 id="programming">Programming&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>言語&lt;/th>
+ &lt;th>使途&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>C++&lt;/td>
+ &lt;td>授業や研究で使用。速いと嬉しい時に使用。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Python&lt;/td>
+ &lt;td>ちょっとした開発や競技プログラミングに使用。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Kotlin&lt;/td>
+ &lt;td>Androidアプリ開発に使用。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Java&lt;/td>
+ &lt;td>MinecraftのMod/Plugin制作や、コード解析&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>に使用。&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>※その他の言語: C, Lua, JavaScript, TypeScript&lt;/p>
+&lt;h2 id="certification">Certification&lt;/h2>
+&lt;ul>
+&lt;li>応用情報技術者&lt;/li>
+&lt;li>基本情報技術者&lt;/li>
+&lt;li>珠算2級&lt;/li>
+&lt;/ul>
+&lt;h2 id="icon">Icon&lt;/h2>
+&lt;p>修学旅行で北海道に行ったときにお土産屋で見つけたストラップ。
+その時は買わなかったが、アイコンとしてずっと使っていたら
+欲しくなってきた。
+「&lt;a href="http://terubou.net/">幸せの黄色いてるぼう&lt;/a>」という物らしい。&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Minecraftのプログラムは、&lt;a href="https://github.com/Hexeption/MCP-Reborn">MCP-Reborn&lt;/a> を使用することで解析することができる。&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
