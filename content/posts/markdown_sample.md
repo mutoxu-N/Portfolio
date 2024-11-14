@@ -36,6 +36,7 @@ draft: true
 2. 箇条書き2
 3. 箇条書き3
 
+
 |Left|Center|Right|
 |:---|:----:|----:|
 |L   |C     |R    |
@@ -107,3 +108,28 @@ class MyClass() {
 ---
 
 URLは自動でリンクになります (http://www.example.com)
+
+
+## Shortcodes
+### linkcard
+
+{{< linkcard "https://qiita.com/" >}}
+
+
+### Alert
+
+{{< alert severity="info" size="small" >}}
+  Info
+{{< /alert >}}
+
+{{< alert severity="success" size="small" >}}
+  Success
+{{< /alert >}}
+
+{{< alert severity="warning" size="small" >}}
+  Warning
+{{< /alert >}}
+
+{{< alert severity="error" size="small" >}}
+  Error
+{{< /alert >}}
