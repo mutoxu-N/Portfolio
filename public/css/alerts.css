@@ -1,3 +1,5 @@
+/* ref: https://github.com/squidfingers/hugo-shortcodes */
+
 .alert {
     display: flex;
     gap: 0.5rem;
