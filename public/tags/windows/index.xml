@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on mutoxu=N</title><link>http://localhost:1313/tags/windows/</link><description>Recent content in Windows on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>ディスプレイ設定変更.exe</title><link>http://localhost:1313/posts/display_config_changer/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/display_config_changer/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>デュアルディスプレイの設定変更を一発で行うことのできる実行可能ファイル。
+&lt;code>Windows+P&lt;/code>で設定を変えることができるが、
+アニメーションに時間がかかったり、どの設定を使用するかを選択する手間があるため、
+&lt;strong>一発で&lt;/strong>特定の設定に移動できるようにしたかった。
+&lt;img src="http://localhost:1313/images/posts/display_config/win_p.gif" alt="ショートカットキーで設定する例">&lt;/p>
+&lt;p>また、exeファイルにしておくと、
+&lt;a href="https://www.elgato.com/jp/ja/p/stream-deck-mk2-black">Elgato Stream Deck&lt;/a>に登録することができ、
+物理ボタン押下でディスプレイの設定を自由に変更することができるようになる。&lt;/p>
+&lt;p>&lt;img src="http://localhost:1313/images/posts/display_config/deck.png" alt="Stream Deckの設定例">&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/DisplayConfigChanger">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/DisplayConfigChanger: PCのデュアルモニター設定を変えるためだけのCPP&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/DisplayConfigChanger">GitHub&lt;/a>&lt;/p>
+&lt;h2 id="動機">動機&lt;/h2>
+&lt;p>2枚のモニターには、それぞれ2つの映像入力を行っている。
+片方の映像入力はメインPCのものである。&lt;/p>
+&lt;p>この前提で、以下のような使い分けをこまめに切り替えたいので、
+今回のソフトウェアを開発した。&lt;/p>
+&lt;h3 id="pc画面のみ１">PC画面のみ１&lt;/h3>
+&lt;p>動画を見たり、簡単な調べ物をしたり、ゲームをしたり、
+シングルディスプレイで事足りるときは、
+メインモニターのみを使用。&lt;/p>
+&lt;ul>
+&lt;li>メイン: メインPC&lt;/li>
+&lt;li>サブ: OFF&lt;/li>
+&lt;/ul>
+&lt;h3 id="pc画面のみ２">PC画面のみ２&lt;/h3>
+&lt;p>サブPCをいじりながらメインPCで作業するときには、
+左右でPCを分けて使用する。
+(最近はSSHで済ませてしまうのであまり使わない)&lt;/p>
+&lt;ul>
+&lt;li>メイン: メインPC&lt;/li>
+&lt;li>サブ: サブPC&lt;/li>
+&lt;/ul>
+&lt;h3 id="拡張">拡張&lt;/h3>
+&lt;p>プログラミングや動画編集など2画面が必要なときにデュアルディスプレイで使用。&lt;/p>
+&lt;ul>
+&lt;li>メイン: メインPC&lt;/li>
+&lt;li>サブ: メインPC&lt;/li>
+&lt;/ul>
+&lt;h3 id="セカンドスクリーンのみ">セカンドスクリーンのみ&lt;/h3>
+&lt;p>サブPCで作業をするときや、Switchなどのゲーム機で遊ぶときなどは、
+サブモニターでメインPCの画面を映す。&lt;/p>
+&lt;ul>
+&lt;li>メイン: ゲーム機やサブPC&lt;/li>
+&lt;li>サブ: メインPC&lt;/li>
+&lt;/ul>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>プログラム自体は単純で、
+Windowsの&lt;a href="https://learn.microsoft.com/ja-jp/windows/win32/api/winuser/nf-winuser-setdisplayconfig">SetDisplayConfig関数&lt;/a>を呼び出すだけだった。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c++" data-lang="c++">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">#include&lt;/span> &lt;span style="color:#8ec07c;font-style:italic">&amp;lt;windows.h&amp;gt;&lt;/span>&lt;span style="color:#8ec07c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">#include&lt;/span> &lt;span style="color:#8ec07c;font-style:italic">&amp;lt;winuser.h&amp;gt;&lt;/span>&lt;span style="color:#8ec07c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fabd2f">int&lt;/span> &lt;span style="color:#fabd2f">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> SetDisplayConfig(&lt;span style="color:#d3869b">0&lt;/span>,&lt;span style="color:#fabd2f">NULL&lt;/span>,&lt;span style="color:#d3869b">0&lt;/span>,&lt;span style="color:#fabd2f">NULL&lt;/span>,SDC_TOPOLOGY_INTERNAL&lt;span style="color:#fe8019">|&lt;/span>SDC_APPLY);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">return&lt;/span> &lt;span style="color:#d3869b">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
