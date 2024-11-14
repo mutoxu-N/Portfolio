@@ -25,11 +25,11 @@ YouTubeなどの動画プラットフォームから動画をダウンロード�
 
 1. [GitHub](https://github.com/mutoxu-N/yt-dlp-GUI)に飛び、
 ソースコード(ZIP)をダウンロードし、ZIPファイルを解凍する。
-![ソースコード(ZIP)のダウンロード](/images/posts/yt-dlp/src_dl.png)
+![ソースコード(ZIP)のダウンロード](/Portfolio/images/posts/yt-dlp/src_dl.png)
 
 1. [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases)をDL&解答し, 
 `bin`フォルダ内の `ffmpeg.exe`, `ffplay.exe`, `ffprobe.exe`を`start.bat`と同じフォルダにコピーする。
-![FFmpegのコピー例](/images/posts/yt-dlp/ffmpeg.png)
+![FFmpegのコピー例](/Portfolio/images/posts/yt-dlp/ffmpeg.png)
 
 1. `setup.bat` を実行する。(ここまでが初期設定)
 1. `start.bat` を実行して、ソフトを起動する。
@@ -59,7 +59,7 @@ CLIツールの主な問題として、使うために知識が必要である�
 ### GUI
 とにかくCLIは難しい(~~難しそうにみえる~~)ので、
 TkinterでGUIを作成した。
-![yt-dlpのGUI画像](/images/posts/yt-dlp/gui.png)
+![yt-dlpのGUI画像](/Portfolio/images/posts/yt-dlp/gui.png)
 
 ### MP3形式でDL
 音楽などは、動画より音声でDLしたいという需要がある。
@@ -71,7 +71,7 @@ TkinterでGUIを作成した。
 デフォルトではMP3形式でダウンロードされるので、
 ダウンロードしたい音楽のURLを1行ずつ記載しておけば、
 すべてが自動でDLされる。
-![一括DLの設定ファイル例](/images/posts/yt-dlp/list.png)
+![一括DLの設定ファイル例](/Portfolio/images/posts/yt-dlp/list.png)
 
 
 ### 限定動画のDL

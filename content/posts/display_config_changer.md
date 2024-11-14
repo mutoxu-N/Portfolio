@@ -11,14 +11,14 @@ date: 2024-11-14
 `Windows+P`で設定を変えることができるが、
 アニメーションに時間がかかったり、どの設定を使用するかを選択する手間があるため、
 **一発で**特定の設定に移動できるようにしたかった。
-![ショートカットキーで設定する例](/images/posts/display_config/win_p.gif)
+![ショートカットキーで設定する例](/Portfolio/images/posts/display_config/win_p.gif)
 
 
 また、exeファイルにしておくと、
 [Elgato Stream Deck](https://www.elgato.com/jp/ja/p/stream-deck-mk2-black)に登録することができ、
 物理ボタン押下でディスプレイの設定を自由に変更することができるようになる。
 
-![Stream Deckの設定例](/images/posts/display_config/deck.png)
+![Stream Deckの設定例](/Portfolio/images/posts/display_config/deck.png)
 
 {{< linkcard "https://github.com/mutoxu-N/DisplayConfigChanger" >}}
 ソースコード: [GitHub](https://github.com/mutoxu-N/DisplayConfigChanger)

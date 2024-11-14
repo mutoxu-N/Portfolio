@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on mutoxu=N</title><link>http://localhost:1313/tags/python/</link><description>Recent content in Python on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/posts/yt-dlp-gui/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/python/</link><description>Recent content in Python on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>YouTubeなどの動画プラットフォームから動画をダウンロードしたりするためのコマンドラインツールとして、
 &lt;a href="https://github.com/yt-dlp/yt-dlp">yt-dlp&lt;/a>というものが存在する。&lt;/p>
 &lt;p>このソフトウェアは&lt;a href="https://pypi.org/project/yt-dlp/">Pythonライブラリ&lt;/a>として利用することもでき、
@@ -27,12 +27,12 @@
 &lt;li>
 &lt;p>&lt;a href="https://github.com/mutoxu-N/yt-dlp-GUI">GitHub&lt;/a>に飛び、
 ソースコード(ZIP)をダウンロードし、ZIPファイルを解凍する。
-&lt;img src="http://localhost:1313/images/posts/yt-dlp/src_dl.png" alt="ソースコード(ZIP)のダウンロード">&lt;/p>
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/yt-dlp/src_dl.png" alt="ソースコード(ZIP)のダウンロード">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;a href="https://github.com/BtbN/FFmpeg-Builds/releases">FFmpeg&lt;/a>をDL&amp;amp;解答し,
 &lt;code>bin&lt;/code>フォルダ内の &lt;code>ffmpeg.exe&lt;/code>, &lt;code>ffplay.exe&lt;/code>, &lt;code>ffprobe.exe&lt;/code>を&lt;code>start.bat&lt;/code>と同じフォルダにコピーする。
-&lt;img src="http://localhost:1313/images/posts/yt-dlp/ffmpeg.png" alt="FFmpegのコピー例">&lt;/p>
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/yt-dlp/ffmpeg.png" alt="FFmpegのコピー例">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>setup.bat&lt;/code> を実行する。(ここまでが初期設定)&lt;/p>
@@ -60,7 +60,7 @@
 &lt;h3 id="gui">GUI&lt;/h3>
 &lt;p>とにかくCLIは難しい(&lt;del>難しそうにみえる&lt;/del>)ので、
 TkinterでGUIを作成した。
-&lt;img src="http://localhost:1313/images/posts/yt-dlp/gui.png" alt="yt-dlpのGUI画像">&lt;/p>
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/yt-dlp/gui.png" alt="yt-dlpのGUI画像">&lt;/p>
 &lt;h3 id="mp3形式でdl">MP3形式でDL&lt;/h3>
 &lt;p>音楽などは、動画より音声でDLしたいという需要がある。
 その中でもMP3形式は幅広く利用されているためこれに対応した。&lt;/p>
@@ -70,7 +70,7 @@ TkinterでGUIを作成した。
 デフォルトではMP3形式でダウンロードされるので、
 ダウンロードしたい音楽のURLを1行ずつ記載しておけば、
 すべてが自動でDLされる。
-&lt;img src="http://localhost:1313/images/posts/yt-dlp/list.png" alt="一括DLの設定ファイル例">&lt;/p>
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/yt-dlp/list.png" alt="一括DLの設定ファイル例">&lt;/p>
 &lt;h3 id="限定動画のdl">限定動画のDL&lt;/h3>
 &lt;p>YouTubeの動画の中には、視聴条件として&lt;/p>
 &lt;ul>
