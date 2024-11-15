@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kotlin on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/kotlin/</link><description>Recent content in Kotlin on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sun, 21 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/kotlin/index.xml" rel="self" type="application/rss+xml"/><item><title>RSA電卓</title><link>http://localhost:1313/Portfolio/posts/rsa_app/</link><pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/rsa_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>RSA暗号の暗号化・復号化を計算するための電卓アプリ。
+2つの素数を入力し、上段で暗号化、下段で復号化の演算を行っている。&lt;/p>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/rsa_app/screen.webp" alt="アプリ画面">&lt;/p>
+&lt;h2 id="解説">解説&lt;/h2>
+&lt;h3 id="鍵の生成">鍵の生成&lt;/h3>
+&lt;p>2つの素数 $p, q$、暗号化したい数値(平文) $m \notin \lbrace p, q \rbrace$ において、
+$n$、$\phi(n)$&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>を定義する。&lt;/p>
+&lt;p>$$ n = p \cdot q $$
+$$ \phi(n) = (p-1)(q-1) $$&lt;/p>
+&lt;p>$n, m$ は互いに素なのでオイラーの定理&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>より以下が成り立つ。
+$$ m^{\phi(n)} \equiv 1 \quad(\bmod n)$$
+$$ m^{\phi(n)+1} \equiv m \quad(\bmod n)$$&lt;/p>
+&lt;p>ここで、暗号化鍵(公開鍵) $d$、復号化鍵(秘密鍵) $e$ は以下のように表すことができ、
+$d$ を決めると、拡張ユークリッドの互除法&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>を用いて $e$ を求められる。($d,e &amp;gt; 0$)&lt;/p>
+&lt;p>$$ d \cdot e \equiv 1 \quad (\bmod\ \phi(n)) $$&lt;/p>
+&lt;p>以上より,&lt;/p>
+&lt;ul>
+&lt;li>公開鍵: $(d, n)$&lt;/li>
+&lt;li>秘密鍵: $(e, n)$&lt;/li>
+&lt;/ul>
+&lt;p>を求められた。&lt;/p></description></item><item><title>電子レンジ温め時間計算アプリ</title><link>http://localhost:1313/Portfolio/posts/microwave_calculator/</link><pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/microwave_calculator/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/microwave_calculator/icon.webp" alt="アプリアイコン">&lt;/p>
+&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>Androidアプリに興味があり、一番はじめに作ったアプリ。
+Google Playストアへのリリースを行った。&lt;/p>
+
+&lt;a href="https://play.google.com/store/apps/details?id=com.github.mutoxu_n.MicrowaveCalculator">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">Microwave Calculator - Apps on Google Play&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="//www.gstatic.com/android/market_images/web/favicon_v3.ico">
+ &lt;/div>
+ 
+ &lt;span>play.google.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+&lt;h2 id="機能">機能&lt;/h2>
+&lt;ul>
+&lt;li>異なるワット数の温め時間を計算する&lt;/li>
+&lt;li>自分の使っているレンジに合わせてワット数を登録できる&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/microwave_calculator/screen.webp" alt="アプリ画面例">&lt;/p>
+&lt;h2 id="動機">動機&lt;/h2>
+&lt;p>自宅の電子レンジのワット数が730Wのものであり、
+長時間の温めが必要な冷凍食品の温め時間が分からないことがあった。
+( 短時間だったら適当に調整できるが500W15分とかだと,
+730Wで10分くらい&amp;hellip;？」と不安になる )&lt;/p>
+&lt;p>そこで、自分の使っているワット数をいくつか登録できるような&lt;strong>温め時間計算アプリ&lt;/strong>が欲しかった。&lt;/p>
+&lt;p>下の入力ボックスにワット数を入力し、ワット数ボタンを長押しすると、ボタンに入力されているワット数が登録される。
+900Wや1500Wの電子レンジを持っている人も、自分のレンジに合わせてワット数を登録することができる。&lt;/p>
+&lt;h2 id="発表">発表&lt;/h2>
+&lt;p>株式会社サポーターズ主催 ライトニングトーク大会で発表しました。(2023/4/27)
+
+&lt;a href="https://talent.supporterz.jp/events/65ad84d5-9f88-4149-b752-f37f1682c08d/">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">【ライトニングトーク】最近、こんなん創ってます【賞金あり】 / 技育CAMPアカデミア | エンジニア&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://talent.supporterz.jp/favicon.ico">
+ &lt;/div>
+ 
+ &lt;span>talent.supporterz.jp&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>&lt;/p>
+&lt;h2 id="ソースコード">ソースコード&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/MicrowaveCalculator">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/MicrowaveCalculator: Android app which converts 2 microwave wattage.&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/MicrowaveCalculator">GitHub&lt;/a>&lt;/p></description></item></channel></rss>

@@ -4,7 +4,7 @@ showTableOfContents: true
 tags: ["Docker", "Let's Encrypt","nginx","oauth"]
 title: "自鯖に外部からHTTPSアクセスするためのリバースプロキシ"
 type: "post"
-date: 2024-11-14
+date: 2024-04-04
 ---
 
 ## 概要

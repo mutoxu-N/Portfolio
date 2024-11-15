@@ -4,7 +4,7 @@ showTableOfContents: true
 tags: ["C++","Windows"]
 title: "ディスプレイ設定変更.exe"
 type: "post"
-date: 2024-11-14
+date: 2023-09-14
 ---
 ## 概要
 デュアルディスプレイの設定変更を一発で行うことのできる実行可能ファイル。

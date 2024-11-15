@@ -4,7 +4,7 @@ showTableOfContents: true
 tags: ["Python", "yt-dlp","FFmpeg"]
 title: "yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい"
 type: "post"
-date: 2024-11-14
+date: 2023-03-06
 ---
 
 ## 概要
