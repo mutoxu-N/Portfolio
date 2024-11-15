@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android Studio on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/android-studio/</link><description>Recent content in Android Studio on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/android-studio/index.xml" rel="self" type="application/rss+xml"/><item><title>電子レンジ温め時間計算アプリ</title><link>http://localhost:1313/Portfolio/posts/microwave_calculator/</link><pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/microwave_calculator/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/microwave_calculator/icon.webp" alt="アプリアイコン">&lt;/p>
+&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>Androidアプリに興味があり、一番はじめに作ったアプリ。
+Google Playストアへのリリースを行った。&lt;/p>
+
+&lt;a href="https://play.google.com/store/apps/details?id=com.github.mutoxu_n.MicrowaveCalculator">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">Microwave Calculator - Apps on Google Play&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="//www.gstatic.com/android/market_images/web/favicon_v3.ico">
+ &lt;/div>
+ 
+ &lt;span>play.google.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+&lt;h2 id="機能">機能&lt;/h2>
+&lt;ul>
+&lt;li>異なるワット数の温め時間を計算する&lt;/li>
+&lt;li>自分の使っているレンジに合わせてワット数を登録できる&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/microwave_calculator/screen.webp" alt="アプリ画面例">&lt;/p>
+&lt;h2 id="動機">動機&lt;/h2>
+&lt;p>自宅の電子レンジのワット数が730Wのものであり、
+長時間の温めが必要な冷凍食品の温め時間が分からないことがあった。
+( 短時間だったら適当に調整できるが500W15分とかだと,
+730Wで10分くらい&amp;hellip;？」と不安になる )&lt;/p>
+&lt;p>そこで、自分の使っているワット数をいくつか登録できるような&lt;strong>温め時間計算アプリ&lt;/strong>が欲しかった。&lt;/p>
+&lt;p>下の入力ボックスにワット数を入力し、ワット数ボタンを長押しすると、ボタンに入力されているワット数が登録される。
+900Wや1500Wの電子レンジを持っている人も、自分のレンジに合わせてワット数を登録することができる。&lt;/p>
+&lt;h2 id="発表">発表&lt;/h2>
+&lt;p>株式会社サポーターズ主催 ライトニングトーク大会で発表しました。(2023/4/27)
+
+&lt;a href="https://talent.supporterz.jp/events/65ad84d5-9f88-4149-b752-f37f1682c08d/">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">【ライトニングトーク】最近、こんなん創ってます【賞金あり】 / 技育CAMPアカデミア | エンジニア&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://talent.supporterz.jp/favicon.ico">
+ &lt;/div>
+ 
+ &lt;span>talent.supporterz.jp&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>&lt;/p>
+&lt;h2 id="ソースコード">ソースコード&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/MicrowaveCalculator">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/MicrowaveCalculator: Android app which converts 2 microwave wattage.&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/MicrowaveCalculator">GitHub&lt;/a>&lt;/p></description></item></channel></rss>
