@@ -1,6 +1,133 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>TV録画サーバーを作った話</title><link>http://localhost:1313/Portfolio/posts/tv_rec/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/tv_rec/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 04 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>自鯖に外部からHTTPSアクセスするためのリバースプロキシ</title><link>http://localhost:1313/Portfolio/posts/reverse_proxy/</link><pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/reverse_proxy/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/tv_rec/">TV録画サーバー&lt;/a>を外部からアクセスできるようにしたかった。&lt;/p>
+&lt;p>しかし、TV放送には著作権があるので、安易にWeb上に公開することはできない。
+これに対処するために必要な処置は以下の２つである。(ポート開放はできる前提)&lt;/p>
+&lt;ul>
+&lt;li>HTTPSによる暗号化&lt;/li>
+&lt;li>ログイン認証によるアクセス制限&lt;/li>
+&lt;/ul>
+&lt;h2 id="nginxの設定">nginxの設定&lt;/h2>
+&lt;p>HTTPS化やログイン認証にはサーバーが必要なので、
+最低限のnginxサーバーを構築する。
+この段階ではリバースプロキシの機能は持っておらず、
+証明書発行やログインページの表示などに使用する。&lt;/p>
+&lt;p>このnginxはDockerを用いて起動することができる。&lt;/p>
+&lt;h2 id="httpsによる暗号化">HTTPSによる暗号化&lt;/h2>
+&lt;p>HTTPSの証明書は&lt;a href="https://letsencrypt.org/ja/">Let&amp;rsquo;s Encrypt&lt;/a>を使って発行した。
+便利なことに、これもDockerイメージがあるので &lt;code>certbot/certbot&lt;/code> を使って証明書の発行と自動更新を行っている。&lt;/p>
+&lt;h2 id="ログイン認証">ログイン認証&lt;/h2>
+&lt;h3 id="oauth2">OAuth2&lt;/h3>
+&lt;p>限られたユーザーのみがTV録画を閲覧できるように、Googleアカウントによる認証を追加した。
+これには、&lt;a href="https://oauth2-proxy.github.io/oauth2-proxy/">OAuth2 Proxy&lt;/a>を使用した。
+OAuth2 ProxyもDocker上で動作するため、&lt;code>quay.io/oauth2-proxy/oauth2-proxy&lt;/code> を使用して実行した。&lt;/p>
+&lt;p>OAuth2とGoogleの連携は多くの人が解説している通りに行った。&lt;/p>
+&lt;h3 id="ホワイトリスト">ホワイトリスト&lt;/h3>
+&lt;p>残念ながら、OAuth2を設定しただけでは、
+どんなGoogleアカウントを使用してもアクセスできてしまうため、登録されたメールアドレスだけを許容するように設定する。&lt;/p>
+&lt;p>以下のような &lt;code>allowmails&lt;/code> というファイルを作成し,
+OAuth2のオプションに &lt;code>--authenticated-emails-file=&amp;quot;allowmails&amp;quot;&lt;/code> を追加することで、
+そのメールアドレスのGoogleアカウントでログインしたときのみ閲覧することができる設定になる。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>taro@example.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>jiro@example.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>saburo@example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="リバースプロキシ">リバースプロキシ&lt;/h2>
+&lt;p>nginxにリバースプロキシ機能を追加する。
+これに関してはネット上に情報が溢れているので各自調べてほしいが、
+TV録画サーバーにプロキシする際に &lt;code>auth_request /oauth2/auth;&lt;/code> を忘れると一般公開されるので注意しよう。&lt;/p>
+&lt;p>このリバースプロキシは汎用的なものなので、TV録画サーバー以外でAPIを公開したいときなどにも使用することができる。&lt;/p></description></item><item><title>TV録画サーバーを作った話</title><link>http://localhost:1313/Portfolio/posts/tv_rec/</link><pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/tv_rec/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>TVを録画するためのサーバーを作成したときの手順と、
-暗号化が解除されず、解決に1週間以上かかった話。&lt;/p></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+暗号化が解除されず、解決に1週間以上かかった話。&lt;/p></description></item><item><title>ディスプレイ設定変更.exe</title><link>http://localhost:1313/Portfolio/posts/display_config_changer/</link><pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/display_config_changer/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>デュアルディスプレイの設定変更を一発で行うことのできる実行可能ファイル。
+&lt;code>Windows+P&lt;/code>で設定を変えることができるが、
+アニメーションに時間がかかったり、どの設定を使用するかを選択する手間があるため、
+&lt;strong>一発で&lt;/strong>特定の設定に移動できるようにしたかった。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/display_config/win_p.gif" alt="ショートカットキーで設定する例">&lt;/p>
+&lt;p>また、exeファイルにしておくと、
+&lt;a href="https://www.elgato.com/jp/ja/p/stream-deck-mk2-black">Elgato Stream Deck&lt;/a>に登録することができ、
+物理ボタン押下でディスプレイの設定を自由に変更することができるようになる。&lt;/p>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/display_config/deck.png" alt="Stream Deckの設定例">&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/DisplayConfigChanger">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/DisplayConfigChanger: PCのデュアルモニター設定を変えるためだけのCPP&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/DisplayConfigChanger">GitHub&lt;/a>&lt;/p>
+&lt;h2 id="動機">動機&lt;/h2>
+&lt;p>2枚のモニターには、それぞれ2つの映像入力を行っている。
+片方の映像入力はメインPCのものである。&lt;/p>
+&lt;p>この前提で、以下のような使い分けをこまめに切り替えたいので、
+今回のソフトウェアを開発した。&lt;/p>
+&lt;h3 id="pc画面のみ１">PC画面のみ１&lt;/h3>
+&lt;p>動画を見たり、簡単な調べ物をしたり、ゲームをしたり、
+シングルディスプレイで事足りるときは、
+メインモニターのみを使用。&lt;/p>
+&lt;ul>
+&lt;li>メイン: メインPC&lt;/li>
+&lt;li>サブ: OFF&lt;/li>
+&lt;/ul>
+&lt;h3 id="pc画面のみ２">PC画面のみ２&lt;/h3>
+&lt;p>サブPCをいじりながらメインPCで作業するときには、
+左右でPCを分けて使用する。
+(最近はSSHで済ませてしまうのであまり使わない)&lt;/p>
+&lt;ul>
+&lt;li>メイン: メインPC&lt;/li>
+&lt;li>サブ: サブPC&lt;/li>
+&lt;/ul>
+&lt;h3 id="拡張">拡張&lt;/h3>
+&lt;p>プログラミングや動画編集など2画面が必要なときにデュアルディスプレイで使用。&lt;/p>
+&lt;ul>
+&lt;li>メイン: メインPC&lt;/li>
+&lt;li>サブ: メインPC&lt;/li>
+&lt;/ul>
+&lt;h3 id="セカンドスクリーンのみ">セカンドスクリーンのみ&lt;/h3>
+&lt;p>サブPCで作業をするときや、Switchなどのゲーム機で遊ぶときなどは、
+サブモニターでメインPCの画面を映す。&lt;/p>
+&lt;ul>
+&lt;li>メイン: ゲーム機やサブPC&lt;/li>
+&lt;li>サブ: メインPC&lt;/li>
+&lt;/ul>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>プログラム自体は単純で、
+Windowsの&lt;a href="https://learn.microsoft.com/ja-jp/windows/win32/api/winuser/nf-winuser-setdisplayconfig">SetDisplayConfig関数&lt;/a>を呼び出すだけだった。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">2
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">3
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">4
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">5
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">6
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c++" data-lang="c++">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">#include&lt;/span> &lt;span style="color:#8ec07c;font-style:italic">&amp;lt;windows.h&amp;gt;&lt;/span>&lt;span style="color:#8ec07c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">#include&lt;/span> &lt;span style="color:#8ec07c;font-style:italic">&amp;lt;winuser.h&amp;gt;&lt;/span>&lt;span style="color:#8ec07c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fabd2f">int&lt;/span> &lt;span style="color:#fabd2f">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> SetDisplayConfig(&lt;span style="color:#d3869b">0&lt;/span>,&lt;span style="color:#fabd2f">NULL&lt;/span>,&lt;span style="color:#d3869b">0&lt;/span>,&lt;span style="color:#fabd2f">NULL&lt;/span>,SDC_TOPOLOGY_INTERNAL&lt;span style="color:#fe8019">|&lt;/span>SDC_APPLY);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">return&lt;/span> &lt;span style="color:#d3869b">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>YouTubeなどの動画プラットフォームから動画をダウンロードしたりするためのコマンドラインツールとして、
 &lt;a href="https://github.com/yt-dlp/yt-dlp">yt-dlp&lt;/a>というものが存在する。&lt;/p>
 &lt;p>このソフトウェアは&lt;a href="https://pypi.org/project/yt-dlp/">Pythonライブラリ&lt;/a>として利用することもでき、
@@ -84,134 +211,7 @@ TkinterでGUIを作成した。
 ブラウザのCookie情報を読み込んでダウンロードを行う機能を実装している。&lt;/p>
 &lt;p>&lt;a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">Get cookies.txt LOCALLY&lt;/a>
 のような拡張機能を利用して &lt;code>youtube.com&lt;/code> のCookie情報をテキストファイルに出力すれば、
-ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>ディスプレイ設定変更.exe</title><link>http://localhost:1313/Portfolio/posts/display_config_changer/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/display_config_changer/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
-&lt;p>デュアルディスプレイの設定変更を一発で行うことのできる実行可能ファイル。
-&lt;code>Windows+P&lt;/code>で設定を変えることができるが、
-アニメーションに時間がかかったり、どの設定を使用するかを選択する手間があるため、
-&lt;strong>一発で&lt;/strong>特定の設定に移動できるようにしたかった。
-&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/display_config/win_p.gif" alt="ショートカットキーで設定する例">&lt;/p>
-&lt;p>また、exeファイルにしておくと、
-&lt;a href="https://www.elgato.com/jp/ja/p/stream-deck-mk2-black">Elgato Stream Deck&lt;/a>に登録することができ、
-物理ボタン押下でディスプレイの設定を自由に変更することができるようになる。&lt;/p>
-&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/display_config/deck.png" alt="Stream Deckの設定例">&lt;/p>
-&lt;p>
-&lt;a href="https://github.com/mutoxu-N/DisplayConfigChanger">
- &lt;div class="link-card">
- &lt;div class="link-card-title">GitHub - mutoxu-N/DisplayConfigChanger: PCのデュアルモニター設定を変えるためだけのCPP&lt;/div>
- &lt;div class="link-card-hostname">
- 
- &lt;div class="link-card-hostname-img">
- &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
- &lt;/div>
- 
- &lt;span>github.com&lt;/span>
- &lt;/div>
- &lt;/div>
-&lt;/a>
-ソースコード: &lt;a href="https://github.com/mutoxu-N/DisplayConfigChanger">GitHub&lt;/a>&lt;/p>
-&lt;h2 id="動機">動機&lt;/h2>
-&lt;p>2枚のモニターには、それぞれ2つの映像入力を行っている。
-片方の映像入力はメインPCのものである。&lt;/p>
-&lt;p>この前提で、以下のような使い分けをこまめに切り替えたいので、
-今回のソフトウェアを開発した。&lt;/p>
-&lt;h3 id="pc画面のみ１">PC画面のみ１&lt;/h3>
-&lt;p>動画を見たり、簡単な調べ物をしたり、ゲームをしたり、
-シングルディスプレイで事足りるときは、
-メインモニターのみを使用。&lt;/p>
-&lt;ul>
-&lt;li>メイン: メインPC&lt;/li>
-&lt;li>サブ: OFF&lt;/li>
-&lt;/ul>
-&lt;h3 id="pc画面のみ２">PC画面のみ２&lt;/h3>
-&lt;p>サブPCをいじりながらメインPCで作業するときには、
-左右でPCを分けて使用する。
-(最近はSSHで済ませてしまうのであまり使わない)&lt;/p>
-&lt;ul>
-&lt;li>メイン: メインPC&lt;/li>
-&lt;li>サブ: サブPC&lt;/li>
-&lt;/ul>
-&lt;h3 id="拡張">拡張&lt;/h3>
-&lt;p>プログラミングや動画編集など2画面が必要なときにデュアルディスプレイで使用。&lt;/p>
-&lt;ul>
-&lt;li>メイン: メインPC&lt;/li>
-&lt;li>サブ: メインPC&lt;/li>
-&lt;/ul>
-&lt;h3 id="セカンドスクリーンのみ">セカンドスクリーンのみ&lt;/h3>
-&lt;p>サブPCで作業をするときや、Switchなどのゲーム機で遊ぶときなどは、
-サブモニターでメインPCの画面を映す。&lt;/p>
-&lt;ul>
-&lt;li>メイン: ゲーム機やサブPC&lt;/li>
-&lt;li>サブ: メインPC&lt;/li>
-&lt;/ul>
-&lt;h2 id="プログラム">プログラム&lt;/h2>
-&lt;p>プログラム自体は単純で、
-Windowsの&lt;a href="https://learn.microsoft.com/ja-jp/windows/win32/api/winuser/nf-winuser-setdisplayconfig">SetDisplayConfig関数&lt;/a>を呼び出すだけだった。&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">2
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">3
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">4
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">5
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">6
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">7
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c++" data-lang="c++">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">#include&lt;/span> &lt;span style="color:#8ec07c;font-style:italic">&amp;lt;windows.h&amp;gt;&lt;/span>&lt;span style="color:#8ec07c">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">#include&lt;/span> &lt;span style="color:#8ec07c;font-style:italic">&amp;lt;winuser.h&amp;gt;&lt;/span>&lt;span style="color:#8ec07c">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8ec07c">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#fabd2f">int&lt;/span> &lt;span style="color:#fabd2f">main&lt;/span>() {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> SetDisplayConfig(&lt;span style="color:#d3869b">0&lt;/span>,&lt;span style="color:#fabd2f">NULL&lt;/span>,&lt;span style="color:#d3869b">0&lt;/span>,&lt;span style="color:#fabd2f">NULL&lt;/span>,SDC_TOPOLOGY_INTERNAL&lt;span style="color:#fe8019">|&lt;/span>SDC_APPLY);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#fe8019">return&lt;/span> &lt;span style="color:#d3869b">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>自鯖に外部からHTTPSアクセスするためのリバースプロキシ</title><link>http://localhost:1313/Portfolio/posts/reverse_proxy/</link><pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/reverse_proxy/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
-&lt;p>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/tv_rec/">TV録画サーバー&lt;/a>を外部からアクセスできるようにしたかった。&lt;/p>
-&lt;p>しかし、TV放送には著作権があるので、安易にWeb上に公開することはできない。
-これに対処するために必要な処置は以下の２つである。(ポート開放はできる前提)&lt;/p>
-&lt;ul>
-&lt;li>HTTPSによる暗号化&lt;/li>
-&lt;li>ログイン認証によるアクセス制限&lt;/li>
-&lt;/ul>
-&lt;h2 id="nginxの設定">nginxの設定&lt;/h2>
-&lt;p>HTTPS化やログイン認証にはサーバーが必要なので、
-最低限のnginxサーバーを構築する。
-この段階ではリバースプロキシの機能は持っておらず、
-証明書発行やログインページの表示などに使用する。&lt;/p>
-&lt;p>このnginxはDockerを用いて起動することができる。&lt;/p>
-&lt;h2 id="httpsによる暗号化">HTTPSによる暗号化&lt;/h2>
-&lt;p>HTTPSの証明書は&lt;a href="https://letsencrypt.org/ja/">Let&amp;rsquo;s Encrypt&lt;/a>を使って発行した。
-便利なことに、これもDockerイメージがあるので &lt;code>certbot/certbot&lt;/code> を使って証明書の発行と自動更新を行っている。&lt;/p>
-&lt;h2 id="ログイン認証">ログイン認証&lt;/h2>
-&lt;h3 id="oauth2">OAuth2&lt;/h3>
-&lt;p>限られたユーザーのみがTV録画を閲覧できるように、Googleアカウントによる認証を追加した。
-これには、&lt;a href="https://oauth2-proxy.github.io/oauth2-proxy/">OAuth2 Proxy&lt;/a>を使用した。
-OAuth2 ProxyもDocker上で動作するため、&lt;code>quay.io/oauth2-proxy/oauth2-proxy&lt;/code> を使用して実行した。&lt;/p>
-&lt;p>OAuth2とGoogleの連携は多くの人が解説している通りに行った。&lt;/p>
-&lt;h3 id="ホワイトリスト">ホワイトリスト&lt;/h3>
-&lt;p>残念ながら、OAuth2を設定しただけでは、
-どんなGoogleアカウントを使用してもアクセスできてしまうため、登録されたメールアドレスだけを許容するように設定する。&lt;/p>
-&lt;p>以下のような &lt;code>allowmails&lt;/code> というファイルを作成し,
-OAuth2のオプションに &lt;code>--authenticated-emails-file=&amp;quot;allowmails&amp;quot;&lt;/code> を追加することで、
-そのメールアドレスのGoogleアカウントでログインしたときのみ閲覧することができる設定になる。&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">1
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">2
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#756d59">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#ebdbb2;background-color:#282828;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>taro@example.com
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>jiro@example.com
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>saburo@example.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="リバースプロキシ">リバースプロキシ&lt;/h2>
-&lt;p>nginxにリバースプロキシ機能を追加する。
-これに関してはネット上に情報が溢れているので各自調べてほしいが、
-TV録画サーバーにプロキシする際に &lt;code>auth_request /oauth2/auth;&lt;/code> を忘れると一般公開されるので注意しよう。&lt;/p>
-&lt;p>このリバースプロキシは汎用的なものなので、TV録画サーバー以外でAPIを公開したいときなどにも使用することができる。&lt;/p></description></item><item><title>Products</title><link>http://localhost:1313/Portfolio/products/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/products/</guid><description>&lt;p>mutoxu=N が作成した物のまとめ。&lt;/p>
+ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>Products</title><link>http://localhost:1313/Portfolio/products/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/products/</guid><description>&lt;p>mutoxu=N が作成した物のまとめ。&lt;/p>
 &lt;h2 id="utility">Utility&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/yt-dlp-gui">GUI for yt-dlp&lt;/a>: YouTube動画の一括ダウンロード&lt;/li>

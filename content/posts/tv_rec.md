@@ -4,7 +4,7 @@ showTableOfContents: true
 tags: ["Docker","MySQL"]
 title: "TV録画サーバーを作った話"
 type: "post"
-date: 2024-11-14
+date: 2023-10-21
 ---
 
 ## 概要
