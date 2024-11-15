@@ -306,7 +306,10 @@ TkinterでGUIを作成した。
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/microwave_calculator">電子レンジ温め時間計算アプリ&lt;/a>: 電子レンジ温め時間を計算するアプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/rsa_app">RSA電卓&lt;/a>: RSA暗号の計算を確認できる電卓アプリ&lt;/li>
 &lt;/ul>
-&lt;h2 id="その他">その他&lt;/h2></description></item><item><title>Profile</title><link>http://localhost:1313/Portfolio/profile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/profile/</guid><description>&lt;p>趣味で開発をしている情報工学科大学生。
+&lt;h2 id="その他">その他&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/reverse_proxy">リバースプロキシ&lt;/a>: TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ&lt;/li>
+&lt;/ul></description></item><item><title>Profile</title><link>http://localhost:1313/Portfolio/profile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/profile/</guid><description>&lt;p>趣味で開発をしている情報工学科大学生。
 学業やバイトが趣味のようなものなので、
 就活などで趣味を聞かれた時に困っている。&lt;/p>
 &lt;h2 id="programming">Programming&lt;/h2>
