@@ -12,5 +12,6 @@ mutoxu=N が作成した物のまとめ。
 
 ## Android関連
 - [電子レンジ温め時間計算アプリ](/Portfolio/posts/microwave_calculator): 電子レンジ温め時間を計算するアプリ
+- [RSA電卓](/Portfolio/posts/rsa_app): RSA暗号の計算を確認できる電卓アプリ
 
 ## その他

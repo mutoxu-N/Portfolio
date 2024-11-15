@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/android/</link><description>Recent content in Android on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>電子レンジ温め時間計算アプリ</title><link>http://localhost:1313/Portfolio/posts/microwave_calculator/</link><pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/microwave_calculator/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/microwave_calculator/icon.webp" alt="アプリアイコン">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/android/</link><description>Recent content in Android on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sun, 21 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>RSA電卓</title><link>http://localhost:1313/Portfolio/posts/rsa_app/</link><pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/rsa_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>RSA暗号の暗号化・復号化を計算するための電卓アプリ。
+2つの素数を入力し、上段で暗号化、下段で復号化の演算を行っている。&lt;/p>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/rsa_app/screen.webp" alt="アプリ画面">&lt;/p>
+&lt;h2 id="解説">解説&lt;/h2>
+&lt;h3 id="鍵の生成">鍵の生成&lt;/h3>
+&lt;p>2つの素数 $p, q$、暗号化したい数値(平文) $m \notin \lbrace p, q \rbrace$ において、
+$n$、$\phi(n)$&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>を定義する。&lt;/p>
+&lt;p>$$ n = p \cdot q $$
+$$ \phi(n) = (p-1)(q-1) $$&lt;/p>
+&lt;p>$n, m$ は互いに素なのでオイラーの定理&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>より以下が成り立つ。
+$$ m^{\phi(n)} \equiv 1 \quad(\bmod n)$$
+$$ m^{\phi(n)+1} \equiv m \quad(\bmod n)$$&lt;/p>
+&lt;p>ここで、暗号化鍵(公開鍵) $d$、復号化鍵(秘密鍵) $e$ は以下のように表すことができ、
+$d$ を決めると、拡張ユークリッドの互除法&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>を用いて $e$ を求められる。($d,e &amp;gt; 0$)&lt;/p>
+&lt;p>$$ d \cdot e \equiv 1 \quad (\bmod\ \phi(n)) $$&lt;/p>
+&lt;p>以上より,&lt;/p>
+&lt;ul>
+&lt;li>公開鍵: $(d, n)$&lt;/li>
+&lt;li>秘密鍵: $(e, n)$&lt;/li>
+&lt;/ul>
+&lt;p>を求められた。&lt;/p></description></item><item><title>電子レンジ温め時間計算アプリ</title><link>http://localhost:1313/Portfolio/posts/microwave_calculator/</link><pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/microwave_calculator/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/microwave_calculator/icon.webp" alt="アプリアイコン">&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;p>Androidアプリに興味があり、一番はじめに作ったアプリ。
 Google Playストアへのリリースを行った。&lt;/p>
