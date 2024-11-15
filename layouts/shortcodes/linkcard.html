@@ -16,7 +16,8 @@
         <!-- headからタイトルを取得 -->
         {{- $title = index (findRE "<title.*?>(.|\n)*?</title>" $head) 0 -}}
         {{- if $title -}}
-          {{- $title = replaceRE "</?title>" "" $title -}}
+        {{- $title = replaceRE "</?title>" "" $title -}}
+        {{- $title = replaceRE "<title.*>" "" $title -}}
         {{- end -}}
 
         <!-- headからfaviconを取得 -->
