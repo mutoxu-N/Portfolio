@@ -30,6 +30,10 @@
           {{- $href = replace $href "href=" "" | replaceRE "[\"']" "" -}}
           {{- if eq (strings.Substr $href 0 1) "/"  -}}
             {{- $favicon_url = print $target_url.Scheme "://" $target_url.Hostname $href -}}
+            {{- $favicon := resources.GetRemote $favicon_url -}}
+            {{- if not $favicon -}}
+              {{- $favicon_url = $href -}}
+            {{- end -}}
           {{- else if gt (len (findRE "^http[s]?://" $href)) 0 -}}
             {{- $favicon_url = $href -}}
           {{- end -}}
