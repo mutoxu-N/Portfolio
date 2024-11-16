@@ -456,7 +456,37 @@ TkinterでGUIを作成した。
 ブラウザのCookie情報を読み込んでダウンロードを行う機能を実装している。&lt;/p>
 &lt;p>&lt;a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">Get cookies.txt LOCALLY&lt;/a>
 のような拡張機能を利用して &lt;code>youtube.com&lt;/code> のCookie情報をテキストファイルに出力すれば、
-ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>WECraft</title><link>http://localhost:1313/Portfolio/posts/wecraft/</link><pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/wecraft/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/title.png" alt="タイトル画面">&lt;/p>
+ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>素因数分解アプリ</title><link>http://localhost:1313/Portfolio/posts/factoring/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/factoring/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>$2, 3, 5, 7, 11, 13, 17, 19$ の合成数が与えられるので、
+その数字を正しい素因数で割り続けるアプリ。
+高校の文化採用に作成した。&lt;/p>
+&lt;p>部室にAndroidタブレットがあったため、
+いろいろなアスペクト比の画面でも正常に動くようなレイアウトを練習するために作成した。
+画面の向きによってレイアウトが変化する。&lt;/p>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/factoring/horizontal.png" alt="横画面">&lt;/p>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/factoring/vertical.png" alt="縦画面">&lt;/p>
+&lt;p>Windows用ダウンロード: &lt;a href="https://github.com/mutoxu-N/Factoring/releases/tag/windows">GitHub&lt;/a>&lt;/p>
+&lt;h2 id="閑話">閑話&lt;/h2>
+&lt;p>僕は一度だけ53問目まで行きましたが、それ以上解いた人は未確認です。&lt;/p>
+&lt;p>当時、文化祭に来ていた小学生が&lt;strong>43問目&lt;/strong>まで解いていました。
+5問ごとに素因数が1つ増えるので、
+$n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になります。&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/Factoring">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/Factoring&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/Factoring">GitHub&lt;/a>&lt;/p></description></item><item><title>WECraft</title><link>http://localhost:1313/Portfolio/posts/wecraft/</link><pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/wecraft/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/title.png" alt="タイトル画面">&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;p>高校時代に文化祭用に、&lt;a href="https://defold.com/">Defold&lt;/a>で作成したゲーム。
 ゲームシステムは&lt;a href="https://store.steampowered.com/app/595690/One_Hour_One_Life/?l=japanese">OHOL&lt;/a>のような形で、
@@ -488,8 +518,8 @@ TkinterでGUIを作成した。
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
 &lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
 &lt;div class="collapse">
- &lt;input class="collapse__input" type="checkbox" id="collapse-03836515">
- &lt;label class="collapse__label" for="collapse-03836515">&lt;/label>
+ &lt;input class="collapse__input" type="checkbox" id="collapse-08090584">
+ &lt;label class="collapse__label" for="collapse-08090584">&lt;/label>
  &lt;div class="collapse__content" style="max-height:0px">
  難易度選択画面ウィンドウで右上の端をクリックすると、
 難易度IMPOSSIBLEをプレイすることができる。
@@ -500,7 +530,7 @@ TkinterでGUIを作成した。
 &lt;script>
  window.addEventListener("DOMContentLoaded", function (event) {
  const checkHeight = () => {
- const input = document.getElementById("collapse-03836515");
+ const input = document.getElementById("collapse-08090584");
  if (input) {
  input.checked = false;
  const collapse = input.parentNode;
@@ -540,7 +570,8 @@ TkinterでGUIを作成した。
 &lt;/ul>
 &lt;h2 id="その他">その他&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/wecraft">WECraft&lt;/a>: 文化祭で発表したOHOLライクのゲーム&lt;/li>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/wecraft">WECraft&lt;/a>: OHOLライクのゲーム&lt;/li>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/factoring">素因数分解アプリ&lt;/a>: 合成数を8つの素数で割るアプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/reverse_proxy">リバースプロキシ&lt;/a>: TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ&lt;/li>
 &lt;/ul></description></item><item><title>Profile</title><link>http://localhost:1313/Portfolio/profile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/profile/</guid><description>&lt;p>趣味で開発をしている情報工学科大学生。
 学業やバイトが趣味のようなものなので、

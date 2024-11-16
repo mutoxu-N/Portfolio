@@ -19,5 +19,6 @@ mutoxu=N が作成した物のまとめ。
 - [重み付き割り勘アプリ](/Portfolio/posts/split_app): 支払い重みを設定した割り勘金額を計算するアプリ
 
 ## その他
-- [WECraft](/Portfolio/posts/wecraft): 文化祭で発表したOHOLライクのゲーム
+- [WECraft](/Portfolio/posts/wecraft): OHOLライクのゲーム
+- [素因数分解アプリ](/Portfolio/posts/factoring): 合成数を8つの素数で割るアプリ
 - [リバースプロキシ](/Portfolio/posts/reverse_proxy): TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ
