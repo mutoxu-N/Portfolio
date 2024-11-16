@@ -51,7 +51,35 @@ Firestoreが更新されたときにAndroidアプリ画面上に即座に反映�
  &lt;/div>
  &lt;/div>
 &lt;/a>
-ソースコード: &lt;a href="https://github.com/mutoxu-N/SplitAPI">GitHub&lt;/a>&lt;/p></description></item><item><title>RSA電卓</title><link>http://localhost:1313/Portfolio/posts/rsa_app/</link><pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/rsa_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SplitAPI">GitHub&lt;/a>&lt;/p></description></item><item><title>PythonとWhisperで音声や動画からSRTファイルを生成する</title><link>http://localhost:1313/Portfolio/posts/subtitle_generator/</link><pubDate>Mon, 22 Jul 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/subtitle_generator/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>音声文字起こし用の深層学習モデル&lt;a href="https://github.com/openai/whisper">Whisper&lt;/a>の高速版である
+&lt;a href="https://github.com/SYSTRAN/faster-whisper">Faster-Whisper&lt;/a>を使った、
+&lt;strong>字幕ファイル生成プログラム&lt;/strong>(SRT)。&lt;/p>
+&lt;p>実行時に出てくるダイアログで音声ファイルを選択すると、
+それに応じた字幕ファイルが生成される。
+SRTファイルは動画編集ソフトなどに直接読み込むことができるため、
+動画字幕を自動生成したいときに利用できる。&lt;/p>
+&lt;h2 id="注意点">注意点&lt;/h2>
+&lt;p>Faster-Whisperのモデルを使用しているため、
+文字起こし精度はモデルに依存します。
+僕の環境だと、&lt;code>large-v3&lt;/code> のモデルを使用しても誤字が多く、
+字幕表示/非表示のタイミングも大きくズレているため、手動での調整が必須となっています。&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/SubtitleGenerator">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/SubtitleGenerator&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SubtitleGenerator">GitHub&lt;/a>&lt;/p></description></item><item><title>RSA電卓</title><link>http://localhost:1313/Portfolio/posts/rsa_app/</link><pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/rsa_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>RSA暗号の暗号化・復号化を計算するための電卓アプリ。
 2つの素数を入力し、上段で暗号化、下段で復号化の演算を行っている。&lt;/p>
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/rsa_app/screen.webp" alt="アプリ画面">&lt;/p>
@@ -353,6 +381,7 @@ TkinterでGUIを作成した。
 &lt;ul>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/yt-dlp-gui">GUI for yt-dlp&lt;/a>: YouTube動画の一括ダウンロード&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/display_config_changer">DisplayConfigChanger&lt;/a>: デュアルディスプレイの設定を変更するEXE&lt;/li>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/subtitle_generator">SRT自動生成&lt;/a>: 文字起こしモデル&amp;quot;Faster-Whisper&amp;quot;を使ったSRT自動生成&lt;/li>
 &lt;/ul>
 &lt;h2 id="android関連">Android関連&lt;/h2>
 &lt;ul>
