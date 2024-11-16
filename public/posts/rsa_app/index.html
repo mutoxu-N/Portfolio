@@ -14,9 +14,9 @@ $n$、$\phi(n)$<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref
 $$ \phi(n) = (p-1)(q-1) $$</p><p>$n, m$ は互いに素なのでオイラーの定理<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>より以下が成り立つ。
 $$ m^{\phi(n)} \equiv 1 \quad(\bmod n)$$
 $$ m^{\phi(n)+1} \equiv m \quad(\bmod n)$$</p><p>ここで、暗号化鍵(公開鍵) $d$、復号化鍵(秘密鍵) $e$ は以下のように表すことができ、
-$d$ を決めると、拡張ユークリッドの互除法<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>を用いて $e$ を求められる。($d,e > 0$)</p><p>$$ d \cdot e \equiv 1 \quad (\bmod\ \phi(n)) $$</p><p>以上より,</p><ul><li>公開鍵: $(d, n)$</li><li>秘密鍵: $(e, n)$</li></ul><p>を求められた。</p><h3 id=暗号化>暗号化</h3><p>平文 $m$ を、公開鍵を使って暗号化し、暗号文 $s$ を得る。
+$d$ を決めると、拡張ユークリッドの互除法<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>を用いて $e$ を求められる。($d,e > 0$)</p><p>$$ d \cdot e \equiv 1 \quad (\bmod\ \phi(n)) $$</p><p>以上より、</p><ul><li>公開鍵: $(d, n)$</li><li>秘密鍵: $(e, n)$</li></ul><p>を求められた。</p><h3 id=暗号化>暗号化</h3><p>平文 $m$ を、公開鍵を使って暗号化し、暗号文 $s$ を得る。
 $$ s = m^d \mod n $$</p><h3 id=復号化>復号化</h3><p>暗号文 $s$ を、秘密鍵を使って複合化し、平文 $m$ を得る。
-$$ m = s^e \mod n $$</p><h3 id=復号できているか確認>復号できているか確認</h3><p>$d \cdot e \equiv 1 \quad (\bmod\ \phi(n))$ より,、
+$$ m = s^e \mod n $$</p><h3 id=復号できているか確認>復号できているか確認</h3><p>$d \cdot e \equiv 1 \quad (\bmod\ \phi(n))$ より、
 $d \cdot e = k\phi(n) + 1\quad (k\in \N)$と置く。</p><p>$$ s^e \equiv m^{d\cdot e} \equiv m^{k\phi(n)+1} \equiv m^{\phi(n)} \cdot m^{\phi(n)} \cdots m^{\phi(n)}\cdot m \equiv m\quad (\bmod n)$$</p><p>$m = s^e\mod n$ となり、復号できていることがわかる。</p><h3 id=高速指数演算>高速指数演算</h3><p>$a^e\mod n$ の計算を高速に行う必要がある。</p><p>まず、$e$ を $m$ ビット整数と仮定し各桁を $b_i \in \lbrace 0, 1 \rbrace$ で表す。
 $$ e = \sum_{i=0}^{m-1} b_i\cdot 2^i $$
 $$ a^e = \prod_{i=0}^{m-1} a^{b_i 2^i} = \prod_{i=0}^{m-1} (a^{2^i})^{b_i}$$</p><p>ここで次の式が成り立つので、下位ビットから計算すると $ O(m) = O(\log n) $で計算することができる。

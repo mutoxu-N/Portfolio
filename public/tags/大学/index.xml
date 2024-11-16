@@ -14,7 +14,7 @@ $$ m^{\phi(n)+1} \equiv m \quad(\bmod n)$$&lt;/p>
 &lt;p>ここで、暗号化鍵(公開鍵) $d$、復号化鍵(秘密鍵) $e$ は以下のように表すことができ、
 $d$ を決めると、拡張ユークリッドの互除法&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>を用いて $e$ を求められる。($d,e &amp;gt; 0$)&lt;/p>
 &lt;p>$$ d \cdot e \equiv 1 \quad (\bmod\ \phi(n)) $$&lt;/p>
-&lt;p>以上より,&lt;/p>
+&lt;p>以上より、&lt;/p>
 &lt;ul>
 &lt;li>公開鍵: $(d, n)$&lt;/li>
 &lt;li>秘密鍵: $(e, n)$&lt;/li>

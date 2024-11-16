@@ -13,6 +13,7 @@ mutoxu=N が作成した物のまとめ。
 ## Android関連
 - [電子レンジ温め時間計算アプリ](/Portfolio/posts/microwave_calculator): 電子レンジ温め時間を計算するアプリ
 - [RSA電卓](/Portfolio/posts/rsa_app): RSA暗号の計算を確認できる電卓アプリ
+- [重み付き割り勘アプリ](/Portfolio/posts/split_app): 支払い重みを設定した割り勘金額を計算するアプリ
 
 ## その他
 - [リバースプロキシ](/Portfolio/posts/reverse_proxy): TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ
