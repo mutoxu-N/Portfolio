@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/python/</link><description>Recent content in Python on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/python/</link><description>Recent content in Python on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
+&lt;h2 id="概要">概要&lt;/h2>
+&lt;ul>
+&lt;li>「先輩は5%多く払う」&lt;/li>
+&lt;li>「飲まない人は半額」&lt;/li>
+&lt;/ul>
+&lt;p>ような状況に対応するための割り勘アプリ。&lt;/p>
+&lt;h2 id="主な機能">主な機能&lt;/h2>
+&lt;ul>
+&lt;li>ルームごとに支払い情報を管理&lt;/li>
+&lt;li>支払い重みで割り勘計算&lt;/li>
+&lt;li>1円/10円/100円単位などでの割り勘&lt;/li>
+&lt;/ul>
+&lt;h2 id="技術">技術&lt;/h2>
+&lt;p>アプリの全体のイメージは以下のようになっている。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/split_structure.svg" alt="全体のイメージ図">&lt;/p>
+&lt;p>データの管理は&lt;a href="https://firebase.google.com/docs/firestore?hl=ja">Firestore&lt;/a>で行う
+&lt;strong>三層アーキテクチャ&lt;/strong>のような構成になっている。
+データの書き込みはAPIから行うことで、アプリから直接DBに書き込むことを禁止している。&lt;/p>
+&lt;p>FirestoreとAndroidアプリはFirebaseのSDKを利用して、
+Firestoreが更新されたときにAndroidアプリ画面上に即座に反映される仕組みになっている。&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;h3 id="android">Android&lt;/h3>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/SplitApp/commits/master/">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">Commits · mutoxu-N/SplitApp · GitHub&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SplitApp">GitHub&lt;/a>&lt;/p>
+&lt;h3 id="api">API&lt;/h3>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/SplitAPI">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/SplitAPI&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SplitAPI">GitHub&lt;/a>&lt;/p></description></item><item><title>PythonとWhisperで音声や動画からSRTファイルを生成する</title><link>http://localhost:1313/Portfolio/posts/subtitle_generator/</link><pubDate>Mon, 22 Jul 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/subtitle_generator/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>音声文字起こし用の深層学習モデル&lt;a href="https://github.com/openai/whisper">Whisper&lt;/a>の高速版である
+&lt;a href="https://github.com/SYSTRAN/faster-whisper">Faster-Whisper&lt;/a>を使った、
+&lt;strong>字幕ファイル生成プログラム&lt;/strong>(SRT)。&lt;/p>
+&lt;p>実行時に出てくるダイアログで音声ファイルを選択すると、
+それに応じた字幕ファイルが生成される。
+SRTファイルは動画編集ソフトなどに直接読み込むことができるため、
+動画字幕を自動生成したいときに利用できる。&lt;/p>
+&lt;h2 id="注意点">注意点&lt;/h2>
+&lt;p>Faster-Whisperのモデルを使用しているため、
+文字起こし精度はモデルに依存します。
+僕の環境だと、&lt;code>large-v3&lt;/code> のモデルを使用しても誤字が多く、
+字幕表示/非表示のタイミングも大きくズレているため、手動での調整が必須となっています。&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/SubtitleGenerator">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/SubtitleGenerator&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SubtitleGenerator">GitHub&lt;/a>&lt;/p></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>YouTubeなどの動画プラットフォームから動画をダウンロードしたりするためのコマンドラインツールとして、
 &lt;a href="https://github.com/yt-dlp/yt-dlp">yt-dlp&lt;/a>というものが存在する。&lt;/p>
 &lt;p>このソフトウェアは&lt;a href="https://pypi.org/project/yt-dlp/">Pythonライブラリ&lt;/a>として利用することもでき、
