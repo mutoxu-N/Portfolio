@@ -51,4 +51,32 @@ Firestoreが更新されたときにAndroidアプリ画面上に即座に反映�
  &lt;/div>
  &lt;/div>
 &lt;/a>
-ソースコード: &lt;a href="https://github.com/mutoxu-N/SplitAPI">GitHub&lt;/a>&lt;/p></description></item></channel></rss>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SplitAPI">GitHub&lt;/a>&lt;/p></description></item><item><title>ブックマークを管理するアプリ「MyBookmark」</title><link>http://localhost:1313/Portfolio/posts/my_bookmark_app/</link><pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/my_bookmark_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>Firebase SDKを使ってみたかったので作ったアプリ。
+&lt;a href="https://firebase.google.com/products/auth?hl=ja">Firebase Authentication&lt;/a>で、
+Googleアカウントでログインすることができ、
+アカウントごとにブックマークの情報を&lt;a href="https://firebase.google.com/products/firestore?hl=ja">Firestore&lt;/a>に保存できる。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/my_bookmark/screen.webp" alt="アプリ画面">&lt;/p>
+&lt;h2 id="主要機能">主要機能&lt;/h2>
+&lt;ul>
+&lt;li>URLとタイトルの保存&lt;/li>
+&lt;li>タグの追加&lt;/li>
+&lt;li>タグで検索&lt;/li>
+&lt;li>共有機能からブックマークを追加&lt;/li>
+&lt;/ul>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/MyBookmarkApp">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/MyBookmarkApp&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/MyBookmarkApp">GitHub&lt;/a>&lt;/p></description></item></channel></rss>

@@ -100,7 +100,59 @@ $d$ を決めると、拡張ユークリッドの互除法&lt;sup id="fnref:3">&
 &lt;li>公開鍵: $(d, n)$&lt;/li>
 &lt;li>秘密鍵: $(e, n)$&lt;/li>
 &lt;/ul>
-&lt;p>を求められた。&lt;/p></description></item><item><title>ブックマークを管理するアプリ「MyBookmark」</title><link>http://localhost:1313/Portfolio/posts/my_bookmark_app/</link><pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/my_bookmark_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>を求められた。&lt;/p></description></item><item><title>予定テンプレート作成アプリ「Secretary」</title><link>http://localhost:1313/Portfolio/posts/secretary_app/</link><pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/secretary_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>Jetpack Composeを使った画面構築を試してみようと作成した
+&lt;strong>予定テンプレート作成アプリ&lt;/strong>。
+一連の予定をテンプレートとして保存し、
+カレンダーに追加することができる。&lt;/p>
+&lt;h2 id="主な機能">主な機能&lt;/h2>
+&lt;ul>
+&lt;li>予定のテンプレートを作成する&lt;/li>
+&lt;li>テンプレートをカレンダーに追加する&lt;/li>
+&lt;/ul>
+&lt;h2 id="具体的な設定方法">具体的な設定方法&lt;/h2>
+&lt;p>以下のような設定を行う。&lt;/p>
+&lt;ol>
+&lt;li>[00:00] 外出の準備&lt;/li>
+&lt;li>[00:10] 塾へ送る&lt;/li>
+&lt;li>[02:00] 部屋を掃除する&lt;/li>
+&lt;li>[04:00] 迎えに行く&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/secretary/screen.webp" alt="アプリ画面">&lt;/p>
+&lt;p>この予定を、ある時間を起点として予定を作成し、
+スマホのカレンダーに登録することができる。&lt;/p>
+&lt;h3 id="設定例1-1200-に設定した場合">設定例1: &lt;code>12:00&lt;/code> に設定した場合&lt;/h3>
+&lt;ol>
+&lt;li>[12:00] 外出の準備&lt;/li>
+&lt;li>[12:10] 塾へ送る&lt;/li>
+&lt;li>[14:00] 部屋を掃除する&lt;/li>
+&lt;li>[16:00] 迎えに行く&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/secretary/register_example1.webp" alt="設定例1">&lt;/p>
+&lt;h3 id="設定例2-1800-に設定した場合">設定例2: &lt;code>18:00&lt;/code> に設定した場合&lt;/h3>
+&lt;ol>
+&lt;li>[18:00] 外出の準備&lt;/li>
+&lt;li>[18:10] 塾へ送る&lt;/li>
+&lt;li>[20:00] 部屋を掃除する&lt;/li>
+&lt;li>[22:00] 迎えに行く&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/secretary/register_example2.webp" alt="設定例2">&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/Secretary">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/Secretary&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/Secretary">GitHub&lt;/a>&lt;/p></description></item><item><title>ブックマークを管理するアプリ「MyBookmark」</title><link>http://localhost:1313/Portfolio/posts/my_bookmark_app/</link><pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/my_bookmark_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>Firebase SDKを使ってみたかったので作ったアプリ。
 &lt;a href="https://firebase.google.com/products/auth?hl=ja">Firebase Authentication&lt;/a>で、
 Googleアカウントでログインすることができ、
@@ -404,7 +456,74 @@ TkinterでGUIを作成した。
 ブラウザのCookie情報を読み込んでダウンロードを行う機能を実装している。&lt;/p>
 &lt;p>&lt;a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">Get cookies.txt LOCALLY&lt;/a>
 のような拡張機能を利用して &lt;code>youtube.com&lt;/code> のCookie情報をテキストファイルに出力すれば、
-ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>Products</title><link>http://localhost:1313/Portfolio/products/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/products/</guid><description>&lt;p>mutoxu=N が作成した物のまとめ。&lt;/p>
+ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>WECraft</title><link>http://localhost:1313/Portfolio/posts/wecraft/</link><pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/wecraft/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/title.png" alt="タイトル画面">&lt;/p>
+&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>高校時代に文化祭用に、&lt;a href="https://defold.com/">Defold&lt;/a>で作成したゲーム。
+ゲームシステムは&lt;a href="https://store.steampowered.com/app/595690/One_Hour_One_Life/?l=japanese">OHOL&lt;/a>のような形で、
+目標のアイテムを作成したらクリア。&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/WECraft/releases/tag/v1.0">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">Release WECraft · mutoxu-N/WECraft · GitHub&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ダウンロード: &lt;a href="https://github.com/mutoxu-N/WECraft/releases/tag/v1.0">GitHub&lt;/a>&lt;/p>
+&lt;h2 id="隠し要素">隠し要素&lt;/h2>
+&lt;h3 id="最高難易度">最高難易度&lt;/h3>
+&lt;p>WECraftの難易度には、難易度順に4つを選択することができる。&lt;/p>
+&lt;ul>
+&lt;li>EASY&lt;/li>
+&lt;li>NORMAL&lt;/li>
+&lt;li>HARD&lt;/li>
+&lt;li>EXTREME&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
+&lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
+&lt;div class="collapse">
+ &lt;input class="collapse__input" type="checkbox" id="collapse-03836515">
+ &lt;label class="collapse__label" for="collapse-03836515">&lt;/label>
+ &lt;div class="collapse__content" style="max-height:0px">
+ 難易度選択画面ウィンドウで右上の端をクリックすると、
+難易度IMPOSSIBLEをプレイすることができる。
+現在、IMPOSSIBLEのクリア者は、
+僕と友人の2人だけしか確認していない。
+ &lt;/div>
+&lt;/div>
+&lt;script>
+ window.addEventListener("DOMContentLoaded", function (event) {
+ const checkHeight = () => {
+ const input = document.getElementById("collapse-03836515");
+ if (input) {
+ input.checked = false;
+ const collapse = input.parentNode;
+ const content = collapse.querySelector(".collapse__content");
+ if (content) {
+ if (content.scrollHeight > 0 &amp;&amp; content.offsetHeight > 0) {
+ if (content.scrollHeight == content.offsetHeight) {
+ collapse.classList.add("collapse--disabled");
+ } else {
+ collapse.classList.remove("collapse--disabled");
+ }
+ }
+ }
+ }
+ };
+ window.addEventListener("resize", checkHeight, false);
+ checkHeight();
+ }, false
+ );
+&lt;/script>
+
+&lt;h3 id="チートモード">チートモード&lt;/h3>
+&lt;p>ある操作を行うとチートモードを起動することができ、&lt;/p></description></item><item><title>Products</title><link>http://localhost:1313/Portfolio/products/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/products/</guid><description>&lt;p>mutoxu=N が作成した物のまとめ。&lt;/p>
 &lt;h2 id="utility">Utility&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/yt-dlp-gui">GUI for yt-dlp&lt;/a>: YouTube動画の一括ダウンロード&lt;/li>
@@ -416,10 +535,12 @@ TkinterでGUIを作成した。
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/microwave_calculator">電子レンジ温め時間計算アプリ&lt;/a>: 電子レンジ温め時間を計算するアプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/rsa_app">RSA電卓&lt;/a>: RSA暗号の計算を確認できる電卓アプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/my_bookmark_app">マイブックマーク&lt;/a>: ブックマークを管理するアプリ&lt;/li>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/secretary_app">予定テンプレート&lt;/a>: 一連の予定をテンプレートとして保存できるアプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/split_app">重み付き割り勘アプリ&lt;/a>: 支払い重みを設定した割り勘金額を計算するアプリ&lt;/li>
 &lt;/ul>
 &lt;h2 id="その他">その他&lt;/h2>
 &lt;ul>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/wecraft">WECraft&lt;/a>: 文化祭で発表したOHOLライクのゲーム&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/reverse_proxy">リバースプロキシ&lt;/a>: TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ&lt;/li>
 &lt;/ul></description></item><item><title>Profile</title><link>http://localhost:1313/Portfolio/profile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/profile/</guid><description>&lt;p>趣味で開発をしている情報工学科大学生。
 学業やバイトが趣味のようなものなので、

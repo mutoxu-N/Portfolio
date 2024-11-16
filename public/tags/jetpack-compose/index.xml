@@ -72,4 +72,84 @@ $d$ を決めると、拡張ユークリッドの互除法&lt;sup id="fnref:3">&
 &lt;li>公開鍵: $(d, n)$&lt;/li>
 &lt;li>秘密鍵: $(e, n)$&lt;/li>
 &lt;/ul>
-&lt;p>を求められた。&lt;/p></description></item></channel></rss>
+&lt;p>を求められた。&lt;/p></description></item><item><title>予定テンプレート作成アプリ「Secretary」</title><link>http://localhost:1313/Portfolio/posts/secretary_app/</link><pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/secretary_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>Jetpack Composeを使った画面構築を試してみようと作成した
+&lt;strong>予定テンプレート作成アプリ&lt;/strong>。
+一連の予定をテンプレートとして保存し、
+カレンダーに追加することができる。&lt;/p>
+&lt;h2 id="主な機能">主な機能&lt;/h2>
+&lt;ul>
+&lt;li>予定のテンプレートを作成する&lt;/li>
+&lt;li>テンプレートをカレンダーに追加する&lt;/li>
+&lt;/ul>
+&lt;h2 id="具体的な設定方法">具体的な設定方法&lt;/h2>
+&lt;p>以下のような設定を行う。&lt;/p>
+&lt;ol>
+&lt;li>[00:00] 外出の準備&lt;/li>
+&lt;li>[00:10] 塾へ送る&lt;/li>
+&lt;li>[02:00] 部屋を掃除する&lt;/li>
+&lt;li>[04:00] 迎えに行く&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/secretary/screen.webp" alt="アプリ画面">&lt;/p>
+&lt;p>この予定を、ある時間を起点として予定を作成し、
+スマホのカレンダーに登録することができる。&lt;/p>
+&lt;h3 id="設定例1-1200-に設定した場合">設定例1: &lt;code>12:00&lt;/code> に設定した場合&lt;/h3>
+&lt;ol>
+&lt;li>[12:00] 外出の準備&lt;/li>
+&lt;li>[12:10] 塾へ送る&lt;/li>
+&lt;li>[14:00] 部屋を掃除する&lt;/li>
+&lt;li>[16:00] 迎えに行く&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/secretary/register_example1.webp" alt="設定例1">&lt;/p>
+&lt;h3 id="設定例2-1800-に設定した場合">設定例2: &lt;code>18:00&lt;/code> に設定した場合&lt;/h3>
+&lt;ol>
+&lt;li>[18:00] 外出の準備&lt;/li>
+&lt;li>[18:10] 塾へ送る&lt;/li>
+&lt;li>[20:00] 部屋を掃除する&lt;/li>
+&lt;li>[22:00] 迎えに行く&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/secretary/register_example2.webp" alt="設定例2">&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/Secretary">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/Secretary&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/Secretary">GitHub&lt;/a>&lt;/p></description></item><item><title>ブックマークを管理するアプリ「MyBookmark」</title><link>http://localhost:1313/Portfolio/posts/my_bookmark_app/</link><pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/my_bookmark_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>Firebase SDKを使ってみたかったので作ったアプリ。
+&lt;a href="https://firebase.google.com/products/auth?hl=ja">Firebase Authentication&lt;/a>で、
+Googleアカウントでログインすることができ、
+アカウントごとにブックマークの情報を&lt;a href="https://firebase.google.com/products/firestore?hl=ja">Firestore&lt;/a>に保存できる。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/my_bookmark/screen.webp" alt="アプリ画面">&lt;/p>
+&lt;h2 id="主要機能">主要機能&lt;/h2>
+&lt;ul>
+&lt;li>URLとタイトルの保存&lt;/li>
+&lt;li>タグの追加&lt;/li>
+&lt;li>タグで検索&lt;/li>
+&lt;li>共有機能からブックマークを追加&lt;/li>
+&lt;/ul>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/MyBookmarkApp">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/MyBookmarkApp&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/MyBookmarkApp">GitHub&lt;/a>&lt;/p></description></item></channel></rss>
