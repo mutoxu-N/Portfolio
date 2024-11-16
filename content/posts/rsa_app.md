@@ -34,7 +34,7 @@ $d$ を決めると、拡張ユークリッドの互除法[^euclid]を用いて 
 
 $$ d \cdot e \equiv 1 \quad (\bmod\ \phi(n)) $$ 
 
-以上より, 
+以上より、
 - 公開鍵: $(d, n)$
 - 秘密鍵: $(e, n)$
 
@@ -49,7 +49,7 @@ $$ s = m^d \mod n $$
 $$ m = s^e \mod n $$
 
 ### 復号できているか確認
-$d \cdot e \equiv 1 \quad (\bmod\ \phi(n))$ より,、
+$d \cdot e \equiv 1 \quad (\bmod\ \phi(n))$ より、
 $d \cdot e = k\phi(n) + 1\quad (k\in \N)$と置く。
 
 $$ s^e \equiv m^{d\cdot e} \equiv m^{k\phi(n)+1} \equiv m^{\phi(n)} \cdot m^{\phi(n)} \cdots m^{\phi(n)}\cdot m \equiv m\quad (\bmod n)$$
