@@ -3,7 +3,7 @@ other = '最近のポスト'
 [Popular]
 other = 'Post'
 [error404]
-other = 'ページが見つかりませんでした'
+other = '宇宙全体を見てもページがありませんでした'
 [home]
 other = 'ホーム'
 [nothing]
