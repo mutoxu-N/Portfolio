@@ -79,7 +79,25 @@ SRTファイルは動画編集ソフトなどに直接読み込むことがで�
  &lt;/div>
  &lt;/div>
 &lt;/a>
-ソースコード: &lt;a href="https://github.com/mutoxu-N/SubtitleGenerator">GitHub&lt;/a>&lt;/p></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SubtitleGenerator">GitHub&lt;/a>&lt;/p></description></item><item><title>深層学習を用いたリバーシAI</title><link>http://localhost:1313/Portfolio/posts/reversi_app/</link><pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/reversi_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>大学の&lt;a href="https://www.chuo-u.ac.jp/gp/collaborate/program/information/">iDSプログラム&lt;/a>で、
+Alpha Zeroのアルゴリズムを参考にしたリバーシアプリを作成した。
+チームで作成したプロダクトで僕が担当したのは次の要素。&lt;/p>
+&lt;ul>
+&lt;li>機械学習モデルの実装・学習&lt;/li>
+&lt;li>APIの作成&lt;/li>
+&lt;li>Androidアプリの作成&lt;/li>
+&lt;/ul>
+&lt;h2 id="構成">構成&lt;/h2>
+&lt;p>簡単な構成は以下の通り。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/reversi_app/reversi.png" alt="リバーシアプリの全体図">&lt;/p>
+&lt;p>クライアント側から現在の盤面とCPUの手を送信すると、
+サーバー側でCPUの手を計算して配置場所を返す仕組み。
+Webアプリとしてブラウザ上でプレイすることができ、
+同じAPIを使用したAndroidアプリからも
+同様にプレイすることができる。&lt;/p>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;p>&lt;a href="https://www.amazon.co.jp/AlphaZero-%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%E3%83%BB%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92%E3%83%BB%E6%8E%A2%E7%B4%A2-%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%AE%9F%E8%B7%B5%E5%85%A5%E9%96%80-%E5%B8%83%E7%95%99%E5%B7%9D-%E8%8B%B1%E4%B8%80/dp/4862464505">AlphaZero 深層学習・強化学習・探索 人工知能プログラミング実践入門&lt;/a>&lt;/p></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>YouTubeなどの動画プラットフォームから動画をダウンロードしたりするためのコマンドラインツールとして、
 &lt;a href="https://github.com/yt-dlp/yt-dlp">yt-dlp&lt;/a>というものが存在する。&lt;/p>
 &lt;p>このソフトウェアは&lt;a href="https://pypi.org/project/yt-dlp/">Pythonライブラリ&lt;/a>として利用することもでき、
