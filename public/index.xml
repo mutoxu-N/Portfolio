@@ -225,7 +225,25 @@ OAuth2のオプションに &lt;code>--authenticated-emails-file=&amp;quot;allow
 &lt;p>nginxにリバースプロキシ機能を追加する。
 これに関してはネット上に情報が溢れているので各自調べてほしいが、
 TV録画サーバーにプロキシする際に &lt;code>auth_request /oauth2/auth;&lt;/code> を忘れると一般公開されるので注意しよう。&lt;/p>
-&lt;p>このリバースプロキシは汎用的なものなので、TV録画サーバー以外でAPIを公開したいときなどにも使用することができる。&lt;/p></description></item><item><title>TV録画サーバーを作った話</title><link>http://localhost:1313/Portfolio/posts/tv_rec/</link><pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/tv_rec/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>このリバースプロキシは汎用的なものなので、TV録画サーバー以外でAPIを公開したいときなどにも使用することができる。&lt;/p></description></item><item><title>深層学習を用いたリバーシAI</title><link>http://localhost:1313/Portfolio/posts/reversi_app/</link><pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/reversi_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>大学の&lt;a href="https://www.chuo-u.ac.jp/gp/collaborate/program/information/">iDSプログラム&lt;/a>で、
+Alpha Zeroのアルゴリズムを参考にしたリバーシアプリを作成した。
+チームで作成したプロダクトで僕が担当したのは次の要素。&lt;/p>
+&lt;ul>
+&lt;li>機械学習モデルの実装・学習&lt;/li>
+&lt;li>APIの作成&lt;/li>
+&lt;li>Androidアプリの作成&lt;/li>
+&lt;/ul>
+&lt;h2 id="構成">構成&lt;/h2>
+&lt;p>簡単な構成は以下の通り。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/reversi_app/reversi.png" alt="リバーシアプリの全体図">&lt;/p>
+&lt;p>クライアント側から現在の盤面とCPUの手を送信すると、
+サーバー側でCPUの手を計算して配置場所を返す仕組み。
+Webアプリとしてブラウザ上でプレイすることができ、
+同じAPIを使用したAndroidアプリからも
+同様にプレイすることができる。&lt;/p>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;p>&lt;a href="https://www.amazon.co.jp/AlphaZero-%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%E3%83%BB%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92%E3%83%BB%E6%8E%A2%E7%B4%A2-%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%AE%9F%E8%B7%B5%E5%85%A5%E9%96%80-%E5%B8%83%E7%95%99%E5%B7%9D-%E8%8B%B1%E4%B8%80/dp/4862464505">AlphaZero 深層学習・強化学習・探索 人工知能プログラミング実践入門&lt;/a>&lt;/p></description></item><item><title>TV録画サーバーを作った話</title><link>http://localhost:1313/Portfolio/posts/tv_rec/</link><pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/tv_rec/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>TVを録画するためのサーバーを作成したときの手順と、
 暗号化が解除されず、解決に1週間以上かかった話。&lt;/p></description></item><item><title>ディスプレイ設定変更.exe</title><link>http://localhost:1313/Portfolio/posts/display_config_changer/</link><pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/display_config_changer/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>デュアルディスプレイの設定変更を一発で行うことのできる実行可能ファイル。
@@ -518,8 +536,8 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
 &lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
 &lt;div class="collapse">
- &lt;input class="collapse__input" type="checkbox" id="collapse-08090584">
- &lt;label class="collapse__label" for="collapse-08090584">&lt;/label>
+ &lt;input class="collapse__input" type="checkbox" id="collapse-37481603">
+ &lt;label class="collapse__label" for="collapse-37481603">&lt;/label>
  &lt;div class="collapse__content" style="max-height:0px">
  難易度選択画面ウィンドウで右上の端をクリックすると、
 難易度IMPOSSIBLEをプレイすることができる。
@@ -530,7 +548,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;script>
  window.addEventListener("DOMContentLoaded", function (event) {
  const checkHeight = () => {
- const input = document.getElementById("collapse-08090584");
+ const input = document.getElementById("collapse-37481603");
  if (input) {
  input.checked = false;
  const collapse = input.parentNode;
@@ -572,6 +590,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;ul>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/wecraft">WECraft&lt;/a>: OHOLライクのゲーム&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/factoring">素因数分解アプリ&lt;/a>: 合成数を8つの素数で割るアプリ&lt;/li>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/reversi_app">リバーシAI&lt;/a>: TensorFlowを用いたリバーシAI&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/reverse_proxy">リバースプロキシ&lt;/a>: TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ&lt;/li>
 &lt;/ul></description></item><item><title>Profile</title><link>http://localhost:1313/Portfolio/profile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/profile/</guid><description>&lt;p>趣味で開発をしている情報工学科大学生。
 学業やバイトが趣味のようなものなので、

@@ -21,4 +21,5 @@ mutoxu=N が作成した物のまとめ。
 ## その他
 - [WECraft](/Portfolio/posts/wecraft): OHOLライクのゲーム
 - [素因数分解アプリ](/Portfolio/posts/factoring): 合成数を8つの素数で割るアプリ
+- [リバーシAI](/Portfolio/posts/reversi_app): TensorFlowを用いたリバーシAI
 - [リバースプロキシ](/Portfolio/posts/reverse_proxy): TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ
