@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウン備忘録</title><link>http://localhost:1313/Portfolio/posts/markdown_sample/</link><pubDate>Sun, 27 Oct 2024 16:24:27 +0900</pubDate><guid>http://localhost:1313/Portfolio/posts/markdown_sample/</guid><description>&lt;h1 id="ようこそ">ようこそ！&lt;/h1>
+&lt;p>&amp;lt;!--more--&amp;gt; より上はサマリーとして表示されます。
+デフォルトだと半角スペース区切りで70単語文が表示されますが、
+日本語には半角スペースが無いので全文がサマリーとして表示されてしまいます。
+&amp;lt;!--more--&amp;gt; を使いましょう！&lt;/p></description></item><item><title>KATAMINOを解いて分かりやすく表示するアプリ</title><link>http://localhost:1313/Portfolio/posts/katamino/</link><pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/katamino/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/icon.png" alt="アプリアイコン">&lt;/p>
+&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>大学の講義でパズルゲーム「&lt;a href="https://en.gigamic.com/puzzles/104-katamino.html">カタミノ&lt;/a>」の詰め込みについて扱った.
+それを参考に,
+使用するミノと盤面の大きさを指定して,
+詰め込み計算を行うアプリを作成した.&lt;/p></description></item><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;ul>
 &lt;li>「先輩は5%多く払う」&lt;/li>
@@ -390,7 +399,19 @@ Google Playストアへのリリースを行った。&lt;/p>
  &lt;/div>
  &lt;/div>
 &lt;/a>
-ソースコード: &lt;a href="https://github.com/mutoxu-N/MicrowaveCalculator">GitHub&lt;/a>&lt;/p></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/MicrowaveCalculator">GitHub&lt;/a>&lt;/p></description></item><item><title>yt-dlpにGUIをつけてYouTube動画を一括ダウンロードしたい</title><link>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/yt-dlp-gui/</guid><description>&lt;div class="alert alert--error">
+ &lt;div class="alert__icon">
+ &lt;svg class="icon icon--error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />&lt;/svg>
+ &lt;/div>
+ &lt;div class="alert__body">
+ &lt;p>YouTubeに投稿されている動画のダウンロードはYouTubeの規約違反です。
+ご利用は自己責任でお願いします。&lt;/p>
+&lt;p>ただし、ダウンロードした動画を個人で楽しむ分には違法ではありません。&lt;/p>
+
+ &lt;/div>
+&lt;/div>
+
+&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>YouTubeなどの動画プラットフォームから動画をダウンロードしたりするためのコマンドラインツールとして、
 &lt;a href="https://github.com/yt-dlp/yt-dlp">yt-dlp&lt;/a>というものが存在する。&lt;/p>
 &lt;p>このソフトウェアは&lt;a href="https://pypi.org/project/yt-dlp/">Pythonライブラリ&lt;/a>として利用することもでき、
@@ -441,7 +462,7 @@ Google Playストアへのリリースを行った。&lt;/p>
 &lt;h3 id="オプションなどのコマンドを覚える必要がある">オプションなどのコマンドを覚える必要がある&lt;/h3>
 &lt;p>&lt;code>yt-dlp&lt;/code>は高度なソフトウェアであり、
 数多くのオプションを扱えるが、
-その多くが&lt;strong>意味不明&lt;/strong>でよく分からない。&lt;/p>
+知識の無い人にとっては&lt;strong>意味不明&lt;/strong>でよく分からない。&lt;/p>
 &lt;h3 id="ある操作を繰り返す際にコマンドを書くのが面倒">ある操作を繰り返す際にコマンドを書くのが面倒&lt;/h3>
 &lt;p>ある動画をダウンロードするコマンドがあっても、
 複数の動画をDLしたいときには、1動画に対して1つずつコマンドを実行する必要がある。
@@ -452,29 +473,7 @@ Google Playストアへのリリースを行った。&lt;/p>
 &lt;h3 id="gui">GUI&lt;/h3>
 &lt;p>とにかくCLIは難しい(&lt;del>難しそうにみえる&lt;/del>)ので、
 TkinterでGUIを作成した。
-&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/yt-dlp/gui.png" alt="yt-dlpのGUI画像">&lt;/p>
-&lt;h3 id="mp3形式でdl">MP3形式でDL&lt;/h3>
-&lt;p>音楽などは、動画より音声でDLしたいという需要がある。
-その中でもMP3形式は幅広く利用されているためこれに対応した。&lt;/p>
-&lt;h3 id="一括dl">一括DL&lt;/h3>
-&lt;p>出力フォルダに&lt;code>download_list.txt&lt;/code>を配置することで、
-複数の動画から一括でダウンロードを実行することができる。
-デフォルトではMP3形式でダウンロードされるので、
-ダウンロードしたい音楽のURLを1行ずつ記載しておけば、
-すべてが自動でDLされる。
-&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/yt-dlp/list.png" alt="一括DLの設定ファイル例">&lt;/p>
-&lt;h3 id="限定動画のdl">限定動画のDL&lt;/h3>
-&lt;p>YouTubeの動画の中には、視聴条件として&lt;/p>
-&lt;ul>
-&lt;li>YouTube Premiumに加入&lt;/li>
-&lt;li>メンバーシップに参加&lt;/li>
-&lt;/ul>
-&lt;p>が設定されているものがある。&lt;/p>
-&lt;p>このような限定動画に対応するために、
-ブラウザのCookie情報を読み込んでダウンロードを行う機能を実装している。&lt;/p>
-&lt;p>&lt;a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">Get cookies.txt LOCALLY&lt;/a>
-のような拡張機能を利用して &lt;code>youtube.com&lt;/code> のCookie情報をテキストファイルに出力すれば、
-ブラウザのログイン情報を使って動画をDLすることができる。&lt;/p></description></item><item><title>素因数分解アプリ</title><link>http://localhost:1313/Portfolio/posts/factoring/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/factoring/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/yt-dlp/gui.png" alt="yt-dlpのGUI画像">&lt;/p></description></item><item><title>素因数分解アプリ</title><link>http://localhost:1313/Portfolio/posts/factoring/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/factoring/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
 &lt;p>$2, 3, 5, 7, 11, 13, 17, 19$ の合成数が与えられるので、
 その数字を正しい素因数で割り続けるアプリ。
 高校の文化採用に作成した。&lt;/p>
@@ -536,8 +535,8 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
 &lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
 &lt;div class="collapse">
- &lt;input class="collapse__input" type="checkbox" id="collapse-37481603">
- &lt;label class="collapse__label" for="collapse-37481603">&lt;/label>
+ &lt;input class="collapse__input" type="checkbox" id="collapse-24074620">
+ &lt;label class="collapse__label" for="collapse-24074620">&lt;/label>
  &lt;div class="collapse__content" style="max-height:0px">
  難易度選択画面ウィンドウで右上の端をクリックすると、
 難易度IMPOSSIBLEをプレイすることができる。
@@ -548,7 +547,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;script>
  window.addEventListener("DOMContentLoaded", function (event) {
  const checkHeight = () => {
- const input = document.getElementById("collapse-37481603");
+ const input = document.getElementById("collapse-24074620");
  if (input) {
  input.checked = false;
  const collapse = input.parentNode;
