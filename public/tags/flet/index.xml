@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flet on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/flet/</link><description>Recent content in Flet on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/flet/index.xml" rel="self" type="application/rss+xml"/><item><title>KATAMINOを解いて分かりやすく表示するアプリ</title><link>http://localhost:1313/Portfolio/posts/katamino/</link><pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/katamino/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/icon.png" alt="アプリアイコン">&lt;/p>
+&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>大学の講義でパズルゲーム「&lt;a href="https://en.gigamic.com/puzzles/104-katamino.html">カタミノ&lt;/a>」の詰め込みについて扱った.
+それを参考に,
+使用するミノと盤面の大きさを指定して,
+詰め込み計算を行うアプリを作成した.&lt;/p></description></item></channel></rss>

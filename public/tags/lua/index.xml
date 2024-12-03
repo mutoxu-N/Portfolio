@@ -60,8 +60,8 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
 &lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
 &lt;div class="collapse">
- &lt;input class="collapse__input" type="checkbox" id="collapse-48764491">
- &lt;label class="collapse__label" for="collapse-48764491">&lt;/label>
+ &lt;input class="collapse__input" type="checkbox" id="collapse-24074620">
+ &lt;label class="collapse__label" for="collapse-24074620">&lt;/label>
  &lt;div class="collapse__content" style="max-height:0px">
  難易度選択画面ウィンドウで右上の端をクリックすると、
 難易度IMPOSSIBLEをプレイすることができる。
@@ -72,7 +72,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;script>
  window.addEventListener("DOMContentLoaded", function (event) {
  const checkHeight = () => {
- const input = document.getElementById("collapse-48764491");
+ const input = document.getElementById("collapse-24074620");
  if (input) {
  input.checked = false;
  const collapse = input.parentNode;

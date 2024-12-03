@@ -1,8 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mutoxu=N</title><link>http://localhost:1313/Portfolio/posts/</link><description>Recent content in Posts on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sun, 27 Oct 2024 16:24:27 +0900</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウン備忘録</title><link>http://localhost:1313/Portfolio/posts/markdown_sample/</link><pubDate>Sun, 27 Oct 2024 16:24:27 +0900</pubDate><guid>http://localhost:1313/Portfolio/posts/markdown_sample/</guid><description>&lt;h1 id="ようこそ">ようこそ！&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mutoxu=N</title><link>http://localhost:1313/Portfolio/posts/</link><description>Recent content in Posts on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウン備忘録</title><link>http://localhost:1313/Portfolio/posts/markdown_sample/</link><pubDate>Sun, 27 Oct 2024 16:24:27 +0900</pubDate><guid>http://localhost:1313/Portfolio/posts/markdown_sample/</guid><description>&lt;h1 id="ようこそ">ようこそ！&lt;/h1>
 &lt;p>&amp;lt;!--more--&amp;gt; より上はサマリーとして表示されます。
 デフォルトだと半角スペース区切りで70単語文が表示されますが、
 日本語には半角スペースが無いので全文がサマリーとして表示されてしまいます。
-&amp;lt;!--more--&amp;gt; を使いましょう！&lt;/p></description></item><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
+&amp;lt;!--more--&amp;gt; を使いましょう！&lt;/p></description></item><item><title>KATAMINOを解いて分かりやすく表示するアプリ</title><link>http://localhost:1313/Portfolio/posts/katamino/</link><pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/katamino/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>大学の講義でパズルゲーム「&lt;a href="https://en.gigamic.com/puzzles/104-katamino.html">カタミノ&lt;/a>」の詰め込みについて扱った。
+それを参考に、
+使用するミノと盤面の大きさを指定して、
+詰め込み計算を行うアプリを作成した。&lt;/p>
+&lt;h2 id="画面例">画面例&lt;/h2>
+&lt;p>オーソドックスな12x5のカタミノ。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui1.png" alt="画面例1">&lt;/p>
+&lt;p>Fミノを使用しない11x5の詰め込み。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui2.png" alt="画面例2">&lt;/p>
+&lt;p>詰め込み不可能ならこのように表示される。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui3.png" alt="画面例3">&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>Fletを始めて触ったのでメンテナンス性の低いコードになってしまっている。
+良い書き方を勉強したい。&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/KataminoSolver">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/KataminoSolver&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/KataminoSolver">GitHub&lt;/a>&lt;/p></description></item><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;ul>
 &lt;li>「先輩は5%多く払う」&lt;/li>
@@ -530,8 +559,8 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
 &lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
 &lt;div class="collapse">
- &lt;input class="collapse__input" type="checkbox" id="collapse-48764491">
- &lt;label class="collapse__label" for="collapse-48764491">&lt;/label>
+ &lt;input class="collapse__input" type="checkbox" id="collapse-24074620">
+ &lt;label class="collapse__label" for="collapse-24074620">&lt;/label>
  &lt;div class="collapse__content" style="max-height:0px">
  難易度選択画面ウィンドウで右上の端をクリックすると、
 難易度IMPOSSIBLEをプレイすることができる。
@@ -542,7 +571,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;script>
  window.addEventListener("DOMContentLoaded", function (event) {
  const checkHeight = () => {
- const input = document.getElementById("collapse-48764491");
+ const input = document.getElementById("collapse-24074620");
  if (input) {
  input.checked = false;
  const collapse = input.parentNode;
