@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Sun, 27 Oct 2024 16:24:27 +0900</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウン備忘録</title><link>http://localhost:1313/Portfolio/posts/markdown_sample/</link><pubDate>Sun, 27 Oct 2024 16:24:27 +0900</pubDate><guid>http://localhost:1313/Portfolio/posts/markdown_sample/</guid><description>&lt;h1 id="ようこそ">ようこそ！&lt;/h1>
+&lt;p>&amp;lt;!--more--&amp;gt; より上はサマリーとして表示されます。
+デフォルトだと半角スペース区切りで70単語文が表示されますが、
+日本語には半角スペースが無いので全文がサマリーとして表示されてしまいます。
+&amp;lt;!--more--&amp;gt; を使いましょう！&lt;/p></description></item><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;ul>
 &lt;li>「先輩は5%多く払う」&lt;/li>
@@ -536,8 +540,8 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
 &lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
 &lt;div class="collapse">
- &lt;input class="collapse__input" type="checkbox" id="collapse-37481603">
- &lt;label class="collapse__label" for="collapse-37481603">&lt;/label>
+ &lt;input class="collapse__input" type="checkbox" id="collapse-48764491">
+ &lt;label class="collapse__label" for="collapse-48764491">&lt;/label>
  &lt;div class="collapse__content" style="max-height:0px">
  難易度選択画面ウィンドウで右上の端をクリックすると、
 難易度IMPOSSIBLEをプレイすることができる。
@@ -548,7 +552,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;script>
  window.addEventListener("DOMContentLoaded", function (event) {
  const checkHeight = () => {
- const input = document.getElementById("collapse-37481603");
+ const input = document.getElementById("collapse-48764491");
  if (input) {
  input.checked = false;
  const collapse = input.parentNode;
