@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kotlin on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/kotlin/</link><description>Recent content in Kotlin on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Wed, 16 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/kotlin/index.xml" rel="self" type="application/rss+xml"/><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kotlin on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/kotlin/</link><description>Recent content in Kotlin on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 26 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/kotlin/index.xml" rel="self" type="application/rss+xml"/><item><title>Sudoku_app</title><link>http://localhost:1313/Portfolio/posts/sudoku_app/</link><pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/sudoku_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>祖母が数独をやりたがっていたが、既存のアプリは広告が多かったため、広告の無いアプリを作
+成した。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/sudoku_app/screen.png" alt="画面例">&lt;/p>
+&lt;h2 id="データ">データ&lt;/h2>
+&lt;p>数独の問題データは、&lt;a href="https://www.kaggle.com/datasets/radcliffe/3-million-sudoku-puzzles-with-ratings">3 million Sudoku puzzles with ratings&lt;/a> から取得した。
+&lt;code>rating&lt;/code> を基に以下の難易度に分類し、各10000問をランダムに選択して、問題をアプリに埋め込んだ。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">難易度&lt;/th>
+ &lt;th style="text-align: center">レーティング&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">EASY&lt;/td>
+ &lt;td style="text-align: center">0.0&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">NORMAL&lt;/td>
+ &lt;td style="text-align: center">0.1 ~ 2.0&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">HARD&lt;/td>
+ &lt;td style="text-align: center">2.1 ~&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/SudokuApp">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/SudokuApp&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SudokuApp">GitHub&lt;/a>&lt;/p></description></item><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;ul>
 &lt;li>「先輩は5%多く払う」&lt;/li>

@@ -1,13 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウン備忘録</title><link>http://localhost:1313/Portfolio/posts/markdown_sample/</link><pubDate>Sun, 27 Oct 2024 16:24:27 +0900</pubDate><guid>http://localhost:1313/Portfolio/posts/markdown_sample/</guid><description>&lt;h1 id="ようこそ">ようこそ！&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mutoxu=N</title><link>http://localhost:1313/Portfolio/</link><description>Recent content on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Thu, 26 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウン備忘録</title><link>http://localhost:1313/Portfolio/posts/markdown_sample/</link><pubDate>Sun, 27 Oct 2024 16:24:27 +0900</pubDate><guid>http://localhost:1313/Portfolio/posts/markdown_sample/</guid><description>&lt;h1 id="ようこそ">ようこそ！&lt;/h1>
 &lt;p>&amp;lt;!--more--&amp;gt; より上はサマリーとして表示されます。
 デフォルトだと半角スペース区切りで70単語文が表示されますが、
 日本語には半角スペースが無いので全文がサマリーとして表示されてしまいます。
-&amp;lt;!--more--&amp;gt; を使いましょう！&lt;/p></description></item><item><title>KATAMINOを解いて分かりやすく表示するアプリ</title><link>http://localhost:1313/Portfolio/posts/katamino/</link><pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/katamino/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/icon.png" alt="アプリアイコン">&lt;/p>
-&lt;h2 id="概要">概要&lt;/h2>
-&lt;p>大学の講義でパズルゲーム「&lt;a href="https://en.gigamic.com/puzzles/104-katamino.html">カタミノ&lt;/a>」の詰め込みについて扱った.
-それを参考に,
-使用するミノと盤面の大きさを指定して,
-詰め込み計算を行うアプリを作成した.&lt;/p></description></item><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
+&amp;lt;!--more--&amp;gt; を使いましょう！&lt;/p></description></item><item><title>広告の無い数独アプリを作りました</title><link>http://localhost:1313/Portfolio/posts/sudoku_app/</link><pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/sudoku_app/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>祖母が数独をやりたがっていたが、既存のアプリは広告が多いと文句を言っていたため、広告の無いアプリを作成した。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/sudoku_app/screen.png" alt="画面例">&lt;/p>
+&lt;h2 id="データ">データ&lt;/h2>
+&lt;p>数独の問題データは、&lt;a href="https://www.kaggle.com/datasets/radcliffe/3-million-sudoku-puzzles-with-ratings">3 million Sudoku puzzles with ratings&lt;/a> から取得した。
+&lt;code>rating&lt;/code> を基に以下の難易度に分類し、各10000問をランダムに選択して、問題をアプリに埋め込んだ。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">難易度&lt;/th>
+ &lt;th style="text-align: center">レーティング&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">EASY&lt;/td>
+ &lt;td style="text-align: center">0.0&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">NORMAL&lt;/td>
+ &lt;td style="text-align: center">0.1 ~ 2.0&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">HARD&lt;/td>
+ &lt;td style="text-align: center">2.1 ~&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="機能">機能&lt;/h2>
+&lt;ul>
+&lt;li>難易度選択機能&lt;/li>
+&lt;li>クリア判定&lt;/li>
+&lt;li>メモ機能&lt;/li>
+&lt;li>アプリ再開時に進捗状況を読み込む&lt;/li>
+&lt;li>2ヶ国語対応 (日本語、英語)&lt;/li>
+&lt;/ul>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/SudokuApp">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/SudokuApp&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/SudokuApp">GitHub&lt;/a>&lt;/p></description></item><item><title>KATAMINOを解いて分かりやすく表示するアプリ</title><link>http://localhost:1313/Portfolio/posts/katamino/</link><pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/katamino/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>大学の講義でパズルゲーム「&lt;a href="https://en.gigamic.com/puzzles/104-katamino.html">カタミノ&lt;/a>」の詰め込みについて扱った。
+それを参考に、
+使用するミノと盤面の大きさを指定して、
+詰め込み計算を行うアプリを作成した。&lt;/p>
+&lt;h2 id="画面例">画面例&lt;/h2>
+&lt;p>オーソドックスな12x5のカタミノ。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui1.png" alt="画面例1">&lt;/p>
+&lt;p>Fミノを使用しない11x5の詰め込み。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui2.png" alt="画面例2">&lt;/p>
+&lt;p>詰め込み不可能ならこのように表示される。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui3.png" alt="画面例3">&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>Fletを始めて触ったのでメンテナンス性の低いコードになってしまっている。
+良い書き方を勉強したい。&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/KataminoSolver">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/KataminoSolver&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/KataminoSolver">GitHub&lt;/a>&lt;/p></description></item><item><title>支払い重みに対応した割り勘アプリ「Split」</title><link>http://localhost:1313/Portfolio/posts/split_app/</link><pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/split_app/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/split_app/icon.svg" alt="アプリアイコン">&lt;/p>
 &lt;h2 id="概要">概要&lt;/h2>
 &lt;ul>
 &lt;li>「先輩は5%多く払う」&lt;/li>
@@ -535,8 +610,8 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/wecraft/difficulty.png" alt="難易度一覧">&lt;/p>
 &lt;p>実は、最も難しい難易度として &lt;strong>IMPOSSIBLE&lt;/strong> が用意されている。&lt;/p>
 &lt;div class="collapse">
- &lt;input class="collapse__input" type="checkbox" id="collapse-24074620">
- &lt;label class="collapse__label" for="collapse-24074620">&lt;/label>
+ &lt;input class="collapse__input" type="checkbox" id="collapse-47256643">
+ &lt;label class="collapse__label" for="collapse-47256643">&lt;/label>
  &lt;div class="collapse__content" style="max-height:0px">
  難易度選択画面ウィンドウで右上の端をクリックすると、
 難易度IMPOSSIBLEをプレイすることができる。
@@ -547,7 +622,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;script>
  window.addEventListener("DOMContentLoaded", function (event) {
  const checkHeight = () => {
- const input = document.getElementById("collapse-24074620");
+ const input = document.getElementById("collapse-47256643");
  if (input) {
  input.checked = false;
  const collapse = input.parentNode;
@@ -584,6 +659,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/my_bookmark_app">マイブックマーク&lt;/a>: ブックマークを管理するアプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/secretary_app">予定テンプレート&lt;/a>: 一連の予定をテンプレートとして保存できるアプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/split_app">重み付き割り勘アプリ&lt;/a>: 支払い重みを設定した割り勘金額を計算するアプリ&lt;/li>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/sudoku_app">数独アプリ&lt;/a>: 広告の無い数独アプリ&lt;/li>
 &lt;/ul>
 &lt;h2 id="その他">その他&lt;/h2>
 &lt;ul>
@@ -591,6 +667,7 @@ $n$問目の素因数の数は $\lfloor \frac{n}{5} \rfloor + 2$ 個になりま
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/factoring">素因数分解アプリ&lt;/a>: 合成数を8つの素数で割るアプリ&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/reversi_app">リバーシAI&lt;/a>: TensorFlowを用いたリバーシAI&lt;/li>
 &lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/reverse_proxy">リバースプロキシ&lt;/a>: TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ&lt;/li>
+&lt;li>&lt;a href="http://localhost:1313/Portfolio/Portfolio/posts/katamino">KATAMINOソルバー&lt;/a>: 使用ミノと盤面サイズを指定して詰め込みを計算・可視化するアプリ&lt;/li>
 &lt;/ul></description></item><item><title>Profile</title><link>http://localhost:1313/Portfolio/profile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/profile/</guid><description>&lt;p>趣味で開発をしている情報工学科大学生。
 学業やバイトが趣味のようなものなので、
 就活などで趣味を聞かれた時に困っている。&lt;/p>

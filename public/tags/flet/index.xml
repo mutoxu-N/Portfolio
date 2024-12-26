@@ -1,6 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flet on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/flet/</link><description>Recent content in Flet on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/flet/index.xml" rel="self" type="application/rss+xml"/><item><title>KATAMINOを解いて分かりやすく表示するアプリ</title><link>http://localhost:1313/Portfolio/posts/katamino/</link><pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/katamino/</guid><description>&lt;p>&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/icon.png" alt="アプリアイコン">&lt;/p>
-&lt;h2 id="概要">概要&lt;/h2>
-&lt;p>大学の講義でパズルゲーム「&lt;a href="https://en.gigamic.com/puzzles/104-katamino.html">カタミノ&lt;/a>」の詰め込みについて扱った.
-それを参考に,
-使用するミノと盤面の大きさを指定して,
-詰め込み計算を行うアプリを作成した.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flet on mutoxu=N</title><link>http://localhost:1313/Portfolio/tags/flet/</link><description>Recent content in Flet on mutoxu=N</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/flet/index.xml" rel="self" type="application/rss+xml"/><item><title>KATAMINOを解いて分かりやすく表示するアプリ</title><link>http://localhost:1313/Portfolio/posts/katamino/</link><pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:1313/Portfolio/posts/katamino/</guid><description>&lt;h2 id="概要">概要&lt;/h2>
+&lt;p>大学の講義でパズルゲーム「&lt;a href="https://en.gigamic.com/puzzles/104-katamino.html">カタミノ&lt;/a>」の詰め込みについて扱った。
+それを参考に、
+使用するミノと盤面の大きさを指定して、
+詰め込み計算を行うアプリを作成した。&lt;/p>
+&lt;h2 id="画面例">画面例&lt;/h2>
+&lt;p>オーソドックスな12x5のカタミノ。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui1.png" alt="画面例1">&lt;/p>
+&lt;p>Fミノを使用しない11x5の詰め込み。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui2.png" alt="画面例2">&lt;/p>
+&lt;p>詰め込み不可能ならこのように表示される。
+&lt;img src="http://localhost:1313/Portfolio/Portfolio/images/posts/katamino/gui3.png" alt="画面例3">&lt;/p>
+&lt;h2 id="プログラム">プログラム&lt;/h2>
+&lt;p>Fletを始めて触ったのでメンテナンス性の低いコードになってしまっている。
+良い書き方を勉強したい。&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/mutoxu-N/KataminoSolver">
+ &lt;div class="link-card">
+ &lt;div class="link-card-title">GitHub - mutoxu-N/KataminoSolver&lt;/div>
+ &lt;div class="link-card-hostname">
+ 
+ &lt;div class="link-card-hostname-img">
+ &lt;img alt="icon" src="https://github.githubassets.com/favicons/favicon.svg">
+ &lt;/div>
+ 
+ &lt;span>github.com&lt;/span>
+ &lt;/div>
+ &lt;/div>
+&lt;/a>
+ソースコード: &lt;a href="https://github.com/mutoxu-N/KataminoSolver">GitHub&lt;/a>&lt;/p></description></item></channel></rss>
