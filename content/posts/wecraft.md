@@ -9,7 +9,7 @@ date: 2019-09-13
 
 ![タイトル画面](/Portfolio/images/posts/wecraft/title.png)
 
-## 概要
+## 要約
 高校時代に文化祭用に、[Defold](https://defold.com/)で作成したゲーム。
 ゲームシステムは[OHOL](https://store.steampowered.com/app/595690/One_Hour_One_Life/?l=japanese)のような形で、
 目標のアイテムを作成したらクリア。

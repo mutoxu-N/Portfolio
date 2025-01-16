@@ -7,7 +7,7 @@ type: "post"
 date: 2024-12-26
 ---
 
-## 概要
+## 要約
 祖母が数独をやりたがっていたが、既存のアプリは広告が多いと文句を言っていたため、広告の無いアプリを作成した。
 ![画面例](/Portfolio/images/posts/sudoku_app/screen.png)
 

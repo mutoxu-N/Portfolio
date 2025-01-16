@@ -7,7 +7,7 @@ type: "post"
 date: 2024-07-22
 ---
 
-## 概要
+## 要約
 音声文字起こし用の深層学習モデル[Whisper](https://github.com/openai/whisper)の高速版である
 [Faster-Whisper](https://github.com/SYSTRAN/faster-whisper)を使った、
 **字幕ファイル生成プログラム**(SRT)。
