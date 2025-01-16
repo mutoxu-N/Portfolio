@@ -9,7 +9,7 @@ date: 2024-10-16
 
 ![アプリアイコン](/Portfolio/images/posts/split_app/icon.svg)
 
-## 概要
+## 要約
 - 「先輩は5%多く払う」
 - 「飲まない人は半額」
 

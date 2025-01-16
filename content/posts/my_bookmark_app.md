@@ -7,7 +7,7 @@ type: "post"
 date: 2024-05-06
 ---
 
-## 概要
+## 要約
 Firebase SDKを使ってみたかったので作ったアプリ。
 [Firebase Authentication](https://firebase.google.com/products/auth?hl=ja)で、
 Googleアカウントでログインすることができ、

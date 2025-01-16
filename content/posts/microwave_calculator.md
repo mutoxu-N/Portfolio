@@ -9,7 +9,7 @@ date: 2023-04-06
 
 ![アプリアイコン](/Portfolio/images/posts/microwave_calculator/icon.webp)
 
-## 概要
+## 要約
 Androidアプリに興味があり、一番はじめに作ったアプリ。
 Google Playストアへのリリースを行った。
 

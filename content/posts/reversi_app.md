@@ -7,7 +7,7 @@ type: "post"
 date: 2024-02-01
 ---
 
-## 概要
+## 要約
 大学の[iDSプログラム](https://www.chuo-u.ac.jp/gp/collaborate/program/information/)で、
 Alpha Zeroのアルゴリズムを参考にしたリバーシアプリを作成した。
 チームで作成したプロダクトで僕が担当したのは次の要素。

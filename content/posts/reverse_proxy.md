@@ -7,7 +7,7 @@ type: "post"
 date: 2024-04-04
 ---
 
-## 概要
+## 要約
 [TV録画サーバー](/Portfolio/posts/tv_rec/)を外部からアクセスできるようにしたかった。
 
 
