@@ -1,8 +1,8 @@
 ---
 # description: ""
 showTableOfContents: true
-tags: ["OS","DPMS"]
-title: "モニターの電源をコントロールするDPMSを使ってみた"
+tags: ["OS","DPMS", "Windows", "C++"]
+title: "モニター電源をコントロールするDPMSをC++から使ってみた"
 type: "post"
 date: 2025-01-16
 ---
