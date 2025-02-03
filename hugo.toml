@@ -51,7 +51,6 @@ customHeadHTML = """
       });
     </script>
   """
-customCSS = ["/css/linkcard.css"]
 metaKeywords = ["個人開発", "blog", "hugo"]
 showBackToTopButton = true
 togglePreviousAndNextButtons = true
