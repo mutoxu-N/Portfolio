@@ -10,7 +10,7 @@ date: 2023-04-06
 ![アプリアイコン](/Portfolio/images/posts/microwave_calculator/icon.webp)
 
 ## 要約
-Androidアプリに興味があり、一番はじめに作ったアプリ。
+Androidアプリに興味があり、一番はじめに作ったアプリ。 \
 Google Playストアへのリリースを行った。
 
 {{< linkcard "https://play.google.com/store/apps/details?id=com.github.mutoxu_n.MicrowaveCalculator" >}}
