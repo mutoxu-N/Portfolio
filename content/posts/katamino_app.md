@@ -17,14 +17,14 @@ date: 2024-12-02
 
 ## 画面例
 オーソドックスな12x5のカタミノ。
-![画面例1](/Portfolio/images/posts/katamino/gui1.png)
+![画面例1](/Portfolio/images/posts/katamino_app/gui1.png)
 
 
 Fミノを使用しない11x5の詰め込み。
-![画面例2](/Portfolio/images/posts/katamino/gui2.png)
+![画面例2](/Portfolio/images/posts/katamino_app/gui2.png)
 
 詰め込み不可能ならこのように表示される。
-![画面例3](/Portfolio/images/posts/katamino/gui3.png)
+![画面例3](/Portfolio/images/posts/katamino_app/gui3.png)
 
 ## プログラム
 Fletを始めて触ったのでメンテナンス性の低いコードになってしまっている。

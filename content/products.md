@@ -25,4 +25,4 @@ mutoxu=N が作成した物のまとめ。
 - [素因数分解アプリ](/Portfolio/posts/factoring): 合成数を8つの素数で割るアプリ
 - [リバーシAI](/Portfolio/posts/reversi_app): TensorFlowを用いたリバーシAI
 - [リバースプロキシ](/Portfolio/posts/reverse_proxy): TV録画サーバーへ外部からHTTPSアクセスするためのプロキシ
-- [KATAMINOソルバー](/Portfolio/posts/katamino): 使用ミノと盤面サイズを指定して詰め込みを計算・可視化するアプリ
+- [KATAMINOソルバー](/Portfolio/posts/katamino_app): 使用ミノと盤面サイズを指定して詰め込みを計算・可視化するアプリ
