@@ -83,8 +83,8 @@ MeshLab などで開いて確認してみてほしい。
 
 ### Armadillo (sign cut)
 
-![Armadilloに対するsign cutの例](/Portfolio/images/posts/split_mesh/armadillo5000_sign.png)
+![Armadilloに対するsign cutの例](/Portfolio/images/posts/split_mesh/armadillo_sign.png)
 
 ### Armadillo (median cut)
 
-![Armadilloに対するmedian cutの例](/Portfolio/images/posts/split_mesh/armadillo5000_med.png)
+![Armadilloに対するmedian cutの例](/Portfolio/images/posts/split_mesh/armadillo_med.png)
