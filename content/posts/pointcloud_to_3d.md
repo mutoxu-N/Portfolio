@@ -12,6 +12,7 @@ date: 2023-01-14
 画像・映像コンテンツ演習 1 の課題は、
 大量の三次元点群を地面/建物判定し、3D モデルを作成することだった。
 
+作品名: トウキョウスムージー
 ![実行結果例](/Portfolio/images/posts/pointcloud_to_3d/result.png)
 
 ## 入力データ
@@ -82,7 +83,7 @@ $(X, Y)$ の平面でドロネーの三角形分割を使用し、三角形メ�
 ## 感想
 
 最終発表では、**卒業生審査員 優秀賞**を受賞した。\
-参考資料: [2022 年度画像・映像コンテンツ成果物](https://sites.google.com/g.chuo-u.ac.jp/cuise/classes/2022?authuser=0#h.gnxrkucrnssx)
+参考資料: トウキョウスムージー ([2022 年度画像・映像コンテンツ成果物](https://sites.google.com/g.chuo-u.ac.jp/cuise/classes/2022?authuser=0#h.gnxrkucrnssx))
 
 チームではサブリーダーを務め、\
 チームの方針決定やチーム内の技術アドバイスなどを行った。
