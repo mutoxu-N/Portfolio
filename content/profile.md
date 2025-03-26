@@ -20,13 +20,18 @@ showTableOfContents: true
 
 [^reborn]: Minecraft のプログラムは、[MCP-Reborn](https://github.com/Hexeption/MCP-Reborn) を使用することで解析することができる。
 
-※その他の言語: C, Lua, JavaScript, TypeScript, Rust
+※その他の言語: C, Lua, JavaScript, TypeScript, Rust ...
 
-## Certification
+## Certification & Award
 
--   応用情報技術者
--   基本情報技術者
--   珠算 2 級
+-   珠算 2 級 (2014 年 6 月)
+-   基本情報技術者 (2022 年 11 月)
+-   応用情報技術者 (2024 年 7 月)
+-   TOEIC 825 点 (2025 年 3 月)
+-   情報処理学会第 87 回全国大会 学生奨励賞 (2025 年 3 月)
+-   [オープンバッジ](https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/user/dCtnd3pFYnlrVlRzV2hrTDhZSi9JQT09)
+    -   情報処理学会第 87 回全国大会　学生奨励賞
+    -   AI・データサイエンス教育プログラム（iDS プログラム）修了証
 
 ## Icon
 
