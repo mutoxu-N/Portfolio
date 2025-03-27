@@ -22,11 +22,13 @@ showTableOfContents: true
 
 ※その他の言語: C, Lua, JavaScript, TypeScript, Rust ...
 
-## Certification & Award
+## Certification, Award, etc...
 
 -   珠算 2 級 (2014 年 6 月)
 -   基本情報技術者 (2022 年 11 月)
+-   [AI・データサイエンス実践プログラム](https://campus.doda.jp/aiprogram)　 25 卒 1 期 修了 (2023 年 5 月)
 -   応用情報技術者 (2024 年 7 月)
+-   [AtCoder](https://atcoder.jp/users/mutoh21d) 緑 (2025 年 2 月)
 -   TOEIC 825 点 (2025 年 3 月)
 -   情報処理学会第 87 回全国大会 学生奨励賞 (2025 年 3 月)
 -   [オープンバッジ](https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/user/dCtnd3pFYnlrVlRzV2hrTDhZSi9JQT09)
