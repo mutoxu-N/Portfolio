@@ -28,9 +28,11 @@ showTableOfContents: true
 -   基本情報技術者 (2022 年 11 月)
 -   [AI・データサイエンス実践プログラム](https://campus.doda.jp/aiprogram)　 25 卒 1 期 修了 (2023 年 5 月)
 -   応用情報技術者 (2024 年 7 月)
--   [AtCoder](https://atcoder.jp/users/mutoh21d) 緑 (2025 年 2 月)
+-   [AtCoder (Algorithm)](https://atcoder.jp/users/mutoh21d) 緑 (2025 年 2 月)
 -   TOEIC 825 点 (2025 年 3 月)
 -   情報処理学会第 87 回全国大会 学生奨励賞 (2025 年 3 月)
+-   paiza ランク S (2025 年 5 月)
+-   [AtCoder (Heuristic)](https://atcoder.jp/users/mutoh21d?contestType=heuristic) 茶 (2025 年 5 月)
 -   [オープンバッジ](https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/user/dCtnd3pFYnlrVlRzV2hrTDhZSi9JQT09)
     -   情報処理学会第 87 回全国大会　学生奨励賞
     -   AI・データサイエンス教育プログラム（iDS プログラム）修了証
