@@ -72,7 +72,7 @@ Python で動く DDNS クライアントを作成した。
 -   設定例(一時間ごとに実行)
 
 ```
-0 * * * * cd ~/OnamaeDdnsClient && pipenv run python3 update.py
+0 * * * * cd /home/user/OnamaeDdnsClient && pipenv run python3 update.py
 ```
 
 カレントディレクトリにログが書き出されるので `cd` しておくと良い。
