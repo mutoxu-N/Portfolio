@@ -13,7 +13,7 @@ avatarAltText = "avatar"
 avatarSize = "size-m"
 avatarURL = "/Portfolio/images/avater.webp"
 
-description = "Done is better than perfect."
+description = "Don't Work. Get Lost."
 footer = "mutoxu=N"
 socialIcons = [
     { name = "twitter", url = "https://x.com/MutoxuN" },
