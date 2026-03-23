@@ -34,9 +34,10 @@ showTableOfContents: true
 - paiza ランク S (2025 年 5 月)
 - [AtCoder (Heuristic)](https://atcoder.jp/users/mutoh21d?contestType=heuristic) 緑 (2025 年 11 月)
 - [電子情報通信学会 2026年総合大会 ジュニア＆学生ポスターセッション受賞](https://www.ieice.org/jpn_r/junior/poster_session_awards_2026.html) 優秀賞 (2026年3月)
-- [オープンバッジ](https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/user/dCtnd3pFYnlrVlRzV2hrTDhZSi9JQT09)
+- [オープンバッジ](https://wallet.openbadge.net/public/user/832f58ef-30bd-4402-8926-f2cba8d92bbd)
   - 情報処理学会第 87 回全国大会　学生奨励賞
   - AI・データサイエンス教育プログラム（iDS プログラム）修了証
+  - 中央大学理工学研究科電子社会・情報セキュリティ副専攻修了証
 
 ## Icon
 
