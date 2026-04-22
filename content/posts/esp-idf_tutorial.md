@@ -590,3 +590,39 @@ cd ~/esp/v5.5.1/esp-idf; source ./export.sh; cd ../../..
 cd ~/esp-matter; source ./export.sh; cd ..
 export ESP_MATTER_DEVICE_PATH=$ESP_MATTER_PATH/device_hal/device/esp32c6_devkit_c
 ```
+
+### VSCode のインクルードパス
+
+ESP-IDF で使用するソースコードは多岐にわたっており、
+初期設定ではエラーだらけになる可能性がある。
+
+`./build/build.ninja` というファイルを見ると、
+ビルドに関する情報が記載されており、
+`INCLUDES` で検索すると
+`INCLUDES = -I<パス1> -I<パス2> ...` のように設定されていることが分かる。
+
+これをVSCode、C/C++拡張機能の `C_Cpp.default.includePath` という部分に設定することで、
+未定義エラーを回避したり、関数の定義元を辿れたりするようになる。
+
+以下の手順で行うと良いだろう。
+
+1. `INCLUDE = -I...` の `-I` 以降をコピー
+2. vim を開き、クリップボードから貼付
+3. `:%s/ -I/",\r"/g` というコマンドを実行
+4. 1行目の先頭に `"` を追加
+5. 最終行の末尾に `",` を追加 (1行毎に `"<パス>",` という形になれば成功)
+6. VSCode の設定を開く
+7. Userタブではなく、`Remote [WSL: Ubuntu-24.04]` のような名前のタブを選択する
+8. 右上のアイコンから、 `Open Settings (JSON)` をクリック
+9. 先ほど作成した、パスリストを使って、以下の設定を記載する
+
+```json
+{
+  "C_Cpp.default.includePath": [
+    "<パス1>",
+    "<パス2>",
+    ...
+    "<パス最後>",
+  ]
+}
+```
