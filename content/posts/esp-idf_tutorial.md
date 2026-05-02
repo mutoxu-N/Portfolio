@@ -580,6 +580,9 @@ esp_err_t app_driver_light_set_defaults(uint16_t endpoint_id);
 例えばログレベルを設定したい場合には`/LOG_LEVEL` で検索すれば良い。
 ![ログレベルの設定](/Portfolio/images/posts/esp-idf_tutorial/log_level.png)
 
+全体のログレベルを設定するなら、`LOG_DEFAULT_LEVEL` で表示される項目を設定すれば良い。
+
+
 ### ターミナルの開始時の設定
 
 VSCode を再起動するなど、開発時にターミナルを再起動したときには、 \
