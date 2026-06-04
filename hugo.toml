@@ -1,9 +1,9 @@
 baseURL = 'https://mutoxu-n.github.io/Portfolio/'
 title = 'mutoxu=N'
 theme = 'gokarna'
-languageCode = 'ja'
+locale = 'ja'
 DefaultContentLanguage = 'ja'
-
+ignoreLogs = ["warning-goldmark-raw-html"]
 
 [params]
 accentColor = "#4D4DFF"

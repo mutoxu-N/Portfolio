@@ -6,11 +6,12 @@
 {{- $title := "" -}}
 {{- $favicon_url := "" -}}
 
-{{- with $result := resources.GetRemote $url -}}
-    {{- with $result.Err -}}
+{{- with $wrapped := try (resources.GetRemote $url) -}}
+    {{- with $wrapped.Err -}}
       {{- $title = (print $url "にアクセスできませんでした") -}}
     {{- else -}}
         <!-- headを取得 -->
+        {{- $result := $wrapped.Value -}}
         {{- $head := index (findRE "<head[^>]*?>(.|\n)*?</head>" $result.Content) 0 -}}
 
         <!-- headからタイトルを取得 -->
@@ -30,7 +31,8 @@
           {{- $href = replace $href "href=" "" | replaceRE "[\"']" "" -}}
           {{- if eq (strings.Substr $href 0 1) "/"  -}}
             {{- $favicon_url = print $target_url.Scheme "://" $target_url.Hostname $href -}}
-            {{- $favicon := resources.GetRemote $favicon_url -}}
+            {{- $favicon_try := try (resources.GetRemote $favicon_url) -}}
+            {{- $favicon := $favicon_try.Value -}}
             {{- if not $favicon -}}
               {{- $favicon_url = $href -}}
             {{- end -}}
@@ -43,7 +45,8 @@
         {{- if not $favicon_url -}}
           {{- range $favicon_ext := (slice ".ico" ".png" ".gif") -}}
             {{- $root_favicon_path := print $target_url.Scheme "://" $target_url.Hostname "/favicon" $favicon_ext -}}
-            {{- $favicon := resources.GetRemote $root_favicon_path -}}
+            {{- $favicon_try := try (resources.GetRemote $root_favicon_path) -}}
+            {{- $favicon := $favicon_try.Value -}}
            {{- if not $favicon -}}
              {{- continue -}}
            {{- else -}}
