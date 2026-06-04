@@ -3,7 +3,7 @@ title = 'mutoxu=N'
 theme = 'gokarna'
 locale = 'ja'
 DefaultContentLanguage = 'ja'
-
+ignoreLogs = ["warning-goldmark-raw-html"]
 
 [params]
 accentColor = "#4D4DFF"
